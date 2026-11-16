@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Environment Set 3 – RRB JE CBT-2 | THE EXAM ENGINEER</title>
+<meta name="description" content="RRB JE CBT-2 Environment Set 3 – Water, Soil & Noise Pollution. 25 bilingual PYQ-based questions with 1/3 negative marking. THE EXAM ENGINEER.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Noto+Sans+Devanagari:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --forest:#0f4a2d; --forest-2:#0b3320; --leaf:#16a34a; --leaf-soft:#e7f6ec;
+  --amber:#f59e0b; --red:#dc2626; --red-soft:#fdecec; --violet:#7c3aed;
+  --bg:#f3f6f2; --card:#ffffff; --ink:#17251d; --muted:#5b6b62; --line:#d8e2db; --chip:#e9eeea;
+  --head-ink:#ffffff;
+}
+@media (prefers-color-scheme: dark){
+  :root{
+    color-scheme: dark;
+    --forest:#0f3d26; --forest-2:#0a2a1a; --leaf:#34c26a; --leaf-soft:#123222;
+    --amber:#fbbf24; --red:#f87171; --red-soft:#3a1717; --violet:#a78bfa;
+    --bg:#0e1511; --card:#16211b; --ink:#e6efe9; --muted:#9db0a5; --line:#2a3a31; --chip:#223029;
+    --head-ink:#ffffff;
+  }
+}
+*{box-sizing:border-box}
+html,body{margin:0}
+body{font-family:"Poppins","Noto Sans Devanagari",system-ui,sans-serif;background:var(--bg);color:var(--ink);line-height:1.55;-webkit-text-size-adjust:100%}
+body.hi{font-family:"Noto Sans Devanagari","Poppins",system-ui,sans-serif}
+button{font:inherit;cursor:pointer}
+button:focus-visible,a:focus-visible{outline:3px solid var(--amber);outline-offset:2px}
+a{color:inherit}
+
+/* header */
+header{background:linear-gradient(160deg,var(--forest),var(--forest-2));color:var(--head-ink);padding:12px 16px}
+.hwrap{max-width:1040px;margin:0 auto;display:flex;align-items:center;gap:12px;flex-wrap:wrap}
+.logo{width:40px;height:40px;border-radius:50%;background:#22c55e;color:#0b3320;display:grid;place-items:center;font-weight:700;flex:none}
+.brand{flex:1;min-width:180px}
+.brand b{display:block;font-size:16px;letter-spacing:.3px}
+.brand a{font-size:12px;opacity:.85;text-decoration:none}
+.lang{display:flex;background:rgba(255,255,255,.12);border-radius:999px;padding:3px}
+.lang button{border:0;background:transparent;color:#fff;padding:6px 14px;border-radius:999px;font-size:13px;font-weight:600}
+.lang button[aria-pressed="true"]{background:#fff;color:var(--forest)}
+.timer{font-variant-numeric:tabular-nums;font-weight:700;background:rgba(255,255,255,.12);padding:6px 12px;border-radius:8px;font-size:15px;display:none}
+.timer.low{background:var(--red);color:#fff}
+
+main{max-width:1040px;margin:0 auto;padding:18px 14px 40px}
+.panel{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:20px}
+
+/* start screen */
+.start h1{font-size:clamp(22px,4.6vw,32px);line-height:1.25;margin:4px 0 6px;color:var(--ink)}
+.start .sub{color:var(--muted);margin:0 0 16px}
+.facts{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin:14px 0 18px}
+.fact{border:1px solid var(--line);border-radius:10px;padding:10px;text-align:center}
+.fact strong{display:block;font-size:22px;color:var(--leaf)}
+.fact span{font-size:12.5px;color:var(--muted)}
+.rules{margin:0 0 18px;padding-left:20px}
+.rules li{margin:4px 0}
+.legend{display:flex;flex-wrap:wrap;gap:12px;font-size:13px;color:var(--muted);margin-bottom:18px}
+.legend i{display:inline-block;width:14px;height:14px;border-radius:4px;vertical-align:-2px;margin-right:5px}
+.btn{border:0;border-radius:10px;padding:11px 18px;font-weight:600;font-size:15px}
+.btn-main{background:var(--leaf);color:#fff}
+.btn-ghost{background:var(--chip);color:var(--ink)}
+.btn-warn{background:var(--violet);color:#fff}
+.btn-red{background:var(--red);color:#fff}
+.copy{font-size:12px;color:var(--muted);margin-top:16px}
+
+/* quiz */
+.quiz{display:none;grid-template-columns:1fr 270px;gap:16px;align-items:start}
+.qhead{display:flex;justify-content:space-between;align-items:center;margin-bottom:10px;color:var(--muted);font-size:14px}
+.qhead b{color:var(--ink)}
+.marks{font-size:12.5px}
+.qtext{font-size:17px;font-weight:500;margin:0 0 16px}
+body.hi .qtext{font-size:18px}
+.opts{display:grid;gap:10px}
+.opt{display:flex;gap:12px;align-items:flex-start;text-align:left;width:100%;background:transparent;border:1.5px solid var(--line);border-radius:10px;padding:12px 14px;color:var(--ink)}
+.opt .k{flex:none;width:28px;height:28px;border-radius:50%;border:1.5px solid var(--line);display:grid;place-items:center;font-weight:600;font-size:13px}
+.opt[aria-checked="true"]{border-color:var(--leaf);background:var(--leaf-soft)}
+.opt[aria-checked="true"] .k{background:var(--leaf);border-color:var(--leaf);color:#fff}
+.actions{display:flex;flex-wrap:wrap;gap:8px;margin-top:18px}
+.actions .sp{flex:1}
+.side h3{margin:0 0 10px;font-size:15px}
+.pal{display:grid;grid-template-columns:repeat(5,1fr);gap:7px}
+.pal button{border:0;border-radius:8px;height:38px;font-weight:600;background:var(--chip);color:var(--ink)}
+.pal button.ans{background:var(--leaf);color:#fff}
+.pal button.na{background:var(--red);color:#fff}
+.pal button.mk{background:var(--violet);color:#fff}
+.pal button.mka{background:var(--violet);color:#fff;box-shadow:inset 0 -5px 0 var(--leaf)}
+.pal button.cur{outline:3px solid var(--amber);outline-offset:1px}
+.counts{font-size:13px;color:var(--muted);margin:12px 0}
+.counts div{display:flex;justify-content:space-between}
+
+/* result */
+.result{display:none}
+.score{display:flex;flex-wrap:wrap;gap:18px;align-items:center;margin-bottom:16px}
+.ring{width:130px;height:130px;border-radius:50%;display:grid;place-items:center;flex:none}
+.ring div{width:104px;height:104px;border-radius:50%;background:var(--card);display:grid;place-items:center;text-align:center}
+.ring strong{font-size:26px;line-height:1}
+.ring span{font-size:12px;color:var(--muted)}
+.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;flex:1;min-width:260px}
+.stat{border:1px solid var(--line);border-radius:10px;padding:10px;text-align:center}
+.stat strong{display:block;font-size:20px}
+.stat span{font-size:12.5px;color:var(--muted)}
+.verdict{margin:0 0 16px;font-weight:500}
+.review{margin-top:18px;display:grid;gap:12px}
+.rv{border:1px solid var(--line);border-left:5px solid var(--line);border-radius:10px;padding:12px 14px}
+.rv.c{border-left-color:var(--leaf)} .rv.w{border-left-color:var(--red)} .rv.s{border-left-color:var(--amber)}
+.rv .tag{font-size:12px;font-weight:600}
+.rv.c .tag{color:var(--leaf)} .rv.w .tag{color:var(--red)} .rv.s .tag{color:var(--amber)}
+.rv p{margin:6px 0}
+.rv ul{list-style:none;padding:0;margin:6px 0;display:grid;gap:4px}
+.rv li{padding:5px 9px;border-radius:7px;font-size:14.5px}
+.rv li.right{background:var(--leaf-soft);color:var(--leaf);font-weight:600}
+.rv li.wrong{background:var(--red-soft);color:var(--red);text-decoration:line-through}
+.exp{font-size:14px;color:var(--muted);background:var(--chip);border-radius:8px;padding:8px 10px}
+.join{display:flex;flex-wrap:wrap;gap:10px;align-items:center;justify-content:space-between;background:var(--leaf-soft);border:1px solid var(--line);border-radius:12px;padding:12px 14px;margin-top:16px}
+.join a.btn{text-decoration:none}
+footer{text-align:center;font-size:12.5px;color:var(--muted);padding:0 14px 30px}
+footer a{color:var(--leaf);font-weight:600;text-decoration:none}
+
+/* modal */
+.modal{position:fixed;inset:0;background:rgba(0,0,0,.5);display:none;place-items:center;padding:16px;z-index:10}
+.modal .box{background:var(--card);color:var(--ink);border-radius:14px;max-width:420px;width:100%;padding:20px}
+.modal h3{margin:0 0 8px}
+.modal .row{display:flex;gap:8px;justify-content:flex-end;margin-top:16px}
+
+@media (max-width:820px){
+  .quiz{grid-template-columns:1fr}
+  .facts{grid-template-columns:repeat(2,1fr)}
+  .stats{grid-template-columns:repeat(2,1fr)}
+}
+@media (prefers-reduced-motion:no-preference){
+  .opt,.pal button{transition:background .15s,border-color .15s}
+}
+</style>
+</head>
+<body>
+<header>
+  <div class="hwrap">
+    <div class="logo">TE</div>
+    <div class="brand"><b>THE EXAM ENGINEER</b><a href="https://t.me/the_exam_engineer" target="_blank" rel="noopener">t.me/the_exam_engineer</a></div>
+    <div class="timer" id="timer" aria-live="off">20:00</div>
+    <div class="lang" role="group" aria-label="Language">
+      <button id="bEn" aria-pressed="true">English</button>
+      <button id="bHi" aria-pressed="false">हिंदी</button>
+    </div>
+  </div>
+</header>
+
+<main>
+  <!-- START -->
+  <section class="panel start" id="start">
+    <div class="sub" data-t="kicker"></div>
+    <h1 data-t="title"></h1>
+    <p class="sub" data-t="subtitle"></p>
+    <div class="facts">
+      <div class="fact"><strong id="nQ">25</strong><span data-t="fQ"></span></div>
+      <div class="fact"><strong id="nT">20</strong><span data-t="fT"></span></div>
+      <div class="fact"><strong>+1</strong><span data-t="fR"></span></div>
+      <div class="fact"><strong>−⅓</strong><span data-t="fW"></span></div>
+    </div>
+    <ul class="rules" id="rules"></ul>
+    <div class="legend" id="legend"></div>
+    <button class="btn btn-main" id="startBtn" data-t="start"></button>
+    <p class="copy" data-t="copy"></p>
+  </section>
+
+  <!-- QUIZ -->
+  <section class="quiz" id="quiz">
+    <div class="panel">
+      <div class="qhead"><span><b id="qno"></b></span><span class="marks" data-t="marks"></span></div>
+      <p class="qtext" id="qtext"></p>
+      <div class="opts" id="opts" role="radiogroup"></div>
+      <div class="actions">
+        <button class="btn btn-ghost" id="prevBtn" data-t="prev"></button>
+        <button class="btn btn-ghost" id="clearBtn" data-t="clear"></button>
+        <span class="sp"></span>
+        <button class="btn btn-warn" id="markBtn" data-t="mark"></button>
+        <button class="btn btn-main" id="nextBtn" data-t="next"></button>
+      </div>
+    </div>
+    <aside class="panel side">
+      <h3 data-t="palette"></h3>
+      <div class="pal" id="pal"></div>
+      <div class="counts" id="counts"></div>
+      <button class="btn btn-red" style="width:100%" id="submitBtn" data-t="submit"></button>
+    </aside>
+  </section>
+
+  <!-- RESULT -->
+  <section class="panel result" id="result">
+    <h2 data-t="resTitle" style="margin-top:0"></h2>
+    <div class="score">
+      <div class="ring" id="ring"><div><strong id="scoreVal"></strong><span data-t="outOf"></span></div></div>
+      <div class="stats" id="stats"></div>
+    </div>
+    <p class="verdict" id="verdict"></p>
+    <div style="display:flex;gap:8px;flex-wrap:wrap">
+      <button class="btn btn-main" id="retryBtn" data-t="retry"></button>
+    </div>
+    <div class="join">
+      <span data-t="joinTxt"></span>
+      <a class="btn btn-main" href="https://t.me/the_exam_engineer" target="_blank" rel="noopener" data-t="joinBtn"></a>
+    </div>
+    <h3 data-t="revTitle" style="margin:22px 0 0"></h3>
+    <div class="review" id="review"></div>
+  </section>
+</main>
+
+<footer>© 2026 THE EXAM ENGINEER · <span data-t="foot"></span> · <a href="https://t.me/the_exam_engineer" target="_blank" rel="noopener">t.me/the_exam_engineer</a></footer>
+
+<div class="modal" id="modal" role="dialog" aria-modal="true" aria-labelledby="mTitle">
+  <div class="box">
+    <h3 id="mTitle" data-t="mTitle"></h3>
+    <div id="mBody"></div>
+    <div class="row">
+      <button class="btn btn-ghost" id="mNo" data-t="mNo"></button>
+      <button class="btn btn-red" id="mYes" data-t="mYes"></button>
+    </div>
+  </div>
+</div>
+
+<script>
+const UI = {
+ en:{kicker:"RRB JE CBT-2 (2026) · Basics of Environment & Pollution Control",
+  title:"Environment Set 3 – Water, Soil & Noise Pollution",
+  subtitle:"Conceptual, RRB JE PYQ based questions from Chapter 4 (Water & Soil Pollution) and Chapter 5 (Noise Pollution) of the Environment One Stop Solution.",
+  fQ:"Questions",fT:"Minutes",fR:"Per correct answer",fW:"Per wrong answer",
+  rules:["Timer follows the CBT-2 pace: 150 questions in 120 minutes = 48 seconds per question.","Each correct answer gives +1 mark; each wrong answer deducts 1/3 mark. Unattempted questions get 0.","You can switch between English and Hindi at any time.","The test is submitted automatically when the time is over."],
+  legend:[["var(--chip)","Not visited"],["var(--red)","Not answered"],["var(--leaf)","Answered"],["var(--violet)","Marked for review"]],
+  start:"Start test",copy:"© 2026 THE EXAM ENGINEER. Free for practice. Do not copy or re-brand.",
+  marks:"+1 / −⅓",prev:"Previous",clear:"Clear response",mark:"Mark & next",next:"Save & next",palette:"Question palette",submit:"Submit test",
+  q:"Question",of:"of",cAns:"Answered",cNa:"Not answered",cMk:"Marked",cNv:"Not visited",
+  mTitle:"Submit the test?",mNo:"Go back",mYes:"Submit",
+  mBody:(a,u)=>`You have answered ${a} of 25 questions. ${u} are unanswered.`,
+  resTitle:"Your result",outOf:"out of 25",
+  sC:"Correct",sW:"Wrong",sS:"Skipped",sA:"Accuracy",
+  verdicts:["Revise Chapters 4 and 5 of the notes and try again.","Good start. Read the explanations for the questions you missed.","Strong score. Keep this accuracy in the exam.","Excellent. You are ready for these 10 marks."],
+  retry:"Retake test",joinTxt:"Set 1, Set 2 and the full Environment notes are available on the channel.",joinBtn:"Join THE EXAM ENGINEER",
+  revTitle:"Answers with explanation",tC:"Correct",tW:"Wrong",tS:"Not attempted",yours:"Your answer",ans:"Answer",
+  foot:"RRB JE CBT-2 Environment Set 3",timeUp:"Time is over. Your test has been submitted."},
+ hi:{kicker:"RRB JE CBT-2 (2026) · पर्यावरण की मूल बातें एवं प्रदूषण नियंत्रण",
+  title:"पर्यावरण सेट 3 – जल, मृदा एवं ध्वनि प्रदूषण",
+  subtitle:"पर्यावरण वन स्टॉप सॉल्यूशन के अध्याय 4 (जल एवं मृदा प्रदूषण) और अध्याय 5 (ध्वनि प्रदूषण) से अवधारणात्मक, RRB JE PYQ आधारित प्रश्न।",
+  fQ:"प्रश्न",fT:"मिनट",fR:"प्रति सही उत्तर",fW:"प्रति गलत उत्तर",
+  rules:["टाइमर CBT-2 की गति पर है: 120 मिनट में 150 प्रश्न = प्रति प्रश्न 48 सेकंड।","हर सही उत्तर पर +1 अंक; हर गलत उत्तर पर 1/3 अंक कटेगा। छोड़े गए प्रश्न पर 0।","आप कभी भी English और हिंदी के बीच बदल सकते हैं।","समय समाप्त होते ही टेस्ट अपने-आप सबमिट हो जाएगा।"],
+  legend:[["var(--chip)","नहीं देखा"],["var(--red)","उत्तर नहीं दिया"],["var(--leaf)","उत्तर दिया"],["var(--violet)","रिव्यू हेतु चिह्नित"]],
+  start:"टेस्ट शुरू करें",copy:"© 2026 THE EXAM ENGINEER. अभ्यास हेतु निःशुल्क। कॉपी या री-ब्रांड न करें।",
+  marks:"+1 / −⅓",prev:"पिछला",clear:"उत्तर हटाएँ",mark:"चिह्नित करें व आगे",next:"सेव करें व आगे",palette:"प्रश्न पैलेट",submit:"टेस्ट सबमिट करें",
+  q:"प्रश्न",of:"/",cAns:"उत्तर दिया",cNa:"उत्तर नहीं दिया",cMk:"चिह्नित",cNv:"नहीं देखा",
+  mTitle:"टेस्ट सबमिट करें?",mNo:"वापस जाएँ",mYes:"सबमिट करें",
+  mBody:(a,u)=>`आपने 25 में से ${a} प्रश्नों के उत्तर दिए हैं। ${u} प्रश्न बिना उत्तर के हैं।`,
+  resTitle:"आपका परिणाम",outOf:"25 में से",
+  sC:"सही",sW:"गलत",sS:"छोड़े",sA:"सटीकता",
+  verdicts:["नोट्स के अध्याय 4 और 5 दोहराएँ और फिर से प्रयास करें।","अच्छी शुरुआत। जो प्रश्न छूटे उनकी व्याख्या पढ़ें।","बढ़िया स्कोर। परीक्षा में यही सटीकता बनाए रखें।","शानदार। आप इन 10 अंकों के लिए तैयार हैं।"],
+  retry:"टेस्ट दोबारा दें",joinTxt:"सेट 1, सेट 2 और पूरे पर्यावरण नोट्स चैनल पर उपलब्ध हैं।",joinBtn:"THE EXAM ENGINEER से जुड़ें",
+  revTitle:"व्याख्या सहित उत्तर",tC:"सही",tW:"गलत",tS:"प्रयास नहीं किया",yours:"आपका उत्तर",ans:"उत्तर",
+  foot:"RRB JE CBT-2 पर्यावरण सेट 3",timeUp:"समय समाप्त। आपका टेस्ट सबमिट हो गया है।"}
+};
+
+const Q = [{"a": 2, "en": {"q": "Which of the following is a non-point source of water pollution?", "o": ["Sewage outfall pipe", "Factory drain outlet", "Run-off from farm fields", "Power plant discharge canal"], "e": "Farm run-off comes from a wide, diffuse area. The other three discharge from one fixed point."}, "hi": {"q": "निम्नलिखित में से कौन जल प्रदूषण का गैर-बिंदु (non-point) स्रोत है?", "o": ["सीवेज निकास पाइप", "फ़ैक्टरी नाली का मुहाना", "खेतों से बहकर आया जल", "बिजली संयंत्र की निकास नहर"], "e": "खेतों का अपवाह एक बड़े, फैले हुए क्षेत्र से आता है। बाकी तीनों एक निश्चित बिंदु से निकलते हैं।"}}, {"a": 1, "en": {"q": "Waste water from kitchen sinks, baths and washing machines, without any toilet waste, is called:", "o": ["Black water", "Grey water", "Brackish water", "Storm water"], "e": "Grey water has no faecal matter. Black water is toilet waste."}, "hi": {"q": "रसोई के सिंक, स्नान और वॉशिंग मशीन से निकला अपशिष्ट जल, जिसमें शौचालय का अपशिष्ट नहीं होता, कहलाता है:", "o": ["ब्लैक वॉटर (Black water)", "ग्रे वॉटर (Grey water)", "खारा जल (Brackish water)", "वर्षा जल (Storm water)"], "e": "ग्रे वॉटर में मल नहीं होता। ब्लैक वॉटर शौचालय का अपशिष्ट है।"}}, {"a": 3, "en": {"q": "Biochemical Oxygen Demand (BOD) is the oxygen used by microbes to decompose organic matter, measured over:", "o": ["3 days at 27 °C", "1 day at 35 °C", "7 days at 25 °C", "5 days at 20 °C"], "e": "The standard test is BOD₅ at 20 °C."}, "hi": {"q": "जैव-रासायनिक ऑक्सीजन माँग (BOD) कार्बनिक पदार्थ के अपघटन में सूक्ष्मजीवों द्वारा उपयोग की गई ऑक्सीजन है, जिसे मापा जाता है:", "o": ["27 °C पर 3 दिन", "35 °C पर 1 दिन", "25 °C पर 7 दिन", "20 °C पर 5 दिन"], "e": "मानक परीक्षण 20 °C पर BOD₅ है।"}}, {"a": 0, "en": {"q": "A river stretch just below a sewage outfall shows a very high BOD. Its dissolved oxygen (DO) will be:", "o": ["Low, fish may die", "High, fish thrive", "Same as upstream", "Above saturation level"], "e": "High BOD means microbes are consuming oxygen, so DO falls: BOD ↑ → DO ↓."}, "hi": {"q": "सीवेज निकास के ठीक नीचे नदी के एक हिस्से में BOD बहुत अधिक है। वहाँ घुलित ऑक्सीजन (DO) होगी:", "o": ["कम, मछलियाँ मर सकती हैं", "अधिक, मछलियाँ बढ़ेंगी", "ऊपरी धारा के समान", "संतृप्ति स्तर से ऊपर"], "e": "अधिक BOD का अर्थ है सूक्ष्मजीव ऑक्सीजन की खपत कर रहे हैं, इसलिए DO घटती है: BOD ↑ → DO ↓।"}}, {"a": 2, "en": {"q": "In a sample of industrial waste water, the COD is found to be much higher than the BOD. This indicates that the water contains:", "o": ["Mainly biodegradable organic matter", "Very high dissolved oxygen", "Much non-biodegradable matter", "Only harmless mineral salts"], "e": "COD measures both biodegradable and non-biodegradable matter oxidised chemically; BOD measures only what microbes can break down. A large gap means a lot of non-biodegradable (often industrial/toxic) matter."}, "hi": {"q": "एक औद्योगिक अपशिष्ट जल के नमूने में COD, BOD से बहुत अधिक पाया जाता है। इससे पता चलता है कि जल में है:", "o": ["मुख्यतः जैव-निम्नीकरणीय कार्बनिक पदार्थ", "बहुत अधिक घुलित ऑक्सीजन", "अधिक अजैव-निम्नीकरणीय पदार्थ", "केवल हानिरहित खनिज लवण"], "e": "COD रासायनिक ऑक्सीकरण से जैव-निम्नीकरणीय और अजैव-निम्नीकरणीय दोनों पदार्थ मापता है; BOD केवल वह जिसे सूक्ष्मजीव तोड़ सकें। बड़ा अंतर अधिक अजैव-निम्नीकरणीय (प्रायः औद्योगिक/विषैले) पदार्थ दर्शाता है।"}}, {"a": 3, "en": {"q": "Most fish need a dissolved oxygen level of at least:", "o": ["0.5–1 mg/L", "20–25 mg/L", "50–60 mg/L", "4–5 mg/L"], "e": "Clean water has about 8–10 mg/L DO. Below 4–5 mg/L fish start dying."}, "hi": {"q": "अधिकांश मछलियों को कम से कम कितनी घुलित ऑक्सीजन चाहिए?", "o": ["0.5–1 mg/L", "20–25 mg/L", "50–60 mg/L", "4–5 mg/L"], "e": "स्वच्छ जल में लगभग 8–10 mg/L DO होती है। 4–5 mg/L से नीचे मछलियाँ मरने लगती हैं।"}}, {"a": 3, "en": {"q": "Which is the correct sequence of events in eutrophication?", "o": ["Algal bloom → nutrients rise → fish die → DO falls", "DO falls → algal bloom → nutrients rise → fish die", "Fish die → DO falls → nutrients rise → algal bloom", "Nutrients rise → algal bloom → DO falls → fish die"], "e": "Excess N and P cause an algal bloom; when the algae die and decay, DO falls and fish die."}, "hi": {"q": "सुपोषण (eutrophication) में घटनाओं का सही क्रम कौन-सा है?", "o": ["शैवाल प्रस्फुटन → पोषक तत्व बढ़ते हैं → मछलियाँ मरती हैं → DO घटती है", "DO घटती है → शैवाल प्रस्फुटन → पोषक तत्व बढ़ते हैं → मछलियाँ मरती हैं", "मछलियाँ मरती हैं → DO घटती है → पोषक तत्व बढ़ते हैं → शैवाल प्रस्फुटन", "पोषक तत्व बढ़ते हैं → शैवाल प्रस्फुटन → DO घटती है → मछलियाँ मरती हैं"], "e": "अधिक N और P से शैवाल प्रस्फुटन होता है; शैवाल मरकर सड़ते हैं तो DO घटती है और मछलियाँ मरती हैं।"}}, {"a": 2, "en": {"q": "Which pair of nutrients, coming from fertilisers and detergents, is mainly responsible for eutrophication of lakes?", "o": ["Sulphates and chlorides", "Carbonates and silicates", "Nitrates and phosphates", "Fluorides and iodides"], "e": "N and P are the limiting nutrients for algae; phosphates in detergents are a major cause."}, "hi": {"q": "उर्वरकों और डिटर्जेंट से आने वाले पोषक तत्वों का कौन-सा युग्म झीलों के सुपोषण के लिए मुख्यतः ज़िम्मेदार है?", "o": ["सल्फ़ेट और क्लोराइड", "कार्बोनेट और सिलिकेट", "नाइट्रेट और फॉस्फेट", "फ्लोराइड और आयोडाइड"], "e": "N और P शैवाल के लिए सीमाकारी पोषक तत्व हैं; डिटर्जेंट के फॉस्फेट प्रमुख कारण हैं।"}}, {"a": 1, "en": {"q": "After an oil tanker accident, floating barriers are placed around the slick to stop it from spreading. These barriers are called:", "o": ["Skimmers", "Booms", "Dispersants", "Sorbents"], "e": "Booms contain the oil, skimmers remove it, and dispersants break it into droplets."}, "hi": {"q": "तेल टैंकर दुर्घटना के बाद तेल की परत को फैलने से रोकने के लिए उसके चारों ओर तैरते अवरोध लगाए जाते हैं। इन्हें कहते हैं:", "o": ["स्किमर (Skimmers)", "बूम (Booms)", "परिक्षेपक (Dispersants)", "शोषक (Sorbents)"], "e": "बूम तेल को घेरते हैं, स्किमर उसे हटाते हैं और परिक्षेपक उसे छोटी बूँदों में तोड़ते हैं।"}}, {"a": 0, "en": {"q": "Hot cooling water discharged from a power plant into a river harms fish mainly because:", "o": ["Warm water holds less oxygen", "It raises the water's salinity", "It adds heavy metals to water", "It sharply raises the pH"], "e": "This is thermal pollution: the solubility of O₂ falls as temperature rises."}, "hi": {"q": "बिजली संयंत्र से नदी में छोड़ा गया गर्म शीतलन जल मछलियों को मुख्यतः क्यों हानि पहुँचाता है?", "o": ["गर्म जल में कम ऑक्सीजन घुलती है", "यह जल की लवणता बढ़ाता है", "यह जल में भारी धातुएँ मिलाता है", "यह pH को तेज़ी से बढ़ाता है"], "e": "यह तापीय प्रदूषण है: तापमान बढ़ने पर O₂ की घुलनशीलता घटती है।"}}, {"a": 3, "en": {"q": "Families of fishermen near a Japanese bay suffered severe nervous disorders after eating fish contaminated by factory effluent. The pollutant was:", "o": ["Cadmium", "Arsenic", "Lead", "Methylmercury"], "e": "This was Minamata disease (1950s) – mercury biomagnified in fish."}, "hi": {"q": "जापान की एक खाड़ी के पास मछुआरों के परिवार फ़ैक्टरी बहिःस्राव से दूषित मछली खाने के बाद गंभीर तंत्रिका विकारों से पीड़ित हुए। प्रदूषक था:", "o": ["कैडमियम", "आर्सेनिक", "सीसा", "मिथाइल-मर्करी"], "e": "यह मिनामाटा रोग (1950 का दशक) था – मछलियों में जैव-आवर्धित पारा।"}}, {"a": 0, "en": {"q": "Villagers who ate rice irrigated with mine waste water developed painful bone softening and kidney damage. The correct pollutant–disease pair is:", "o": ["Cadmium – Itai-itai", "Mercury – Minamata", "Fluoride – Fluorosis", "Nitrate – Blue baby"], "e": "Itai-itai (\"ouch-ouch\") disease is caused by cadmium and affects bones and kidneys."}, "hi": {"q": "खदान के अपशिष्ट जल से सिंचित चावल खाने वाले ग्रामीणों में हड्डियों का दर्दनाक नरम होना और गुर्दे की क्षति हुई। सही प्रदूषक–रोग युग्म है:", "o": ["कैडमियम – इटाई-इटाई", "पारा – मिनामाटा", "फ्लोराइड – फ्लोरोसिस", "नाइट्रेट – ब्लू बेबी"], "e": "इटाई-इटाई (\"ouch-ouch\") रोग कैडमियम से होता है और हड्डियों व गुर्दों को प्रभावित करता है।"}}, {"a": 1, "en": {"q": "People drinking groundwater with fluoride above 1.5 mg/L develop mottled teeth and knock-knees. The disease is:", "o": ["Black-foot disease", "Fluorosis", "Goitre", "Rickets"], "e": "Excess fluoride causes dental and skeletal fluorosis. Goitre is due to iodine deficiency."}, "hi": {"q": "1.5 mg/L से अधिक फ्लोराइड वाला भूजल पीने वाले लोगों के दाँतों पर धब्बे और घुटने मुड़ने (knock-knee) की समस्या होती है। यह रोग है:", "o": ["ब्लैक-फ़ुट रोग", "फ्लोरोसिस (Fluorosis)", "घेंघा (Goitre)", "रिकेट्स (Rickets)"], "e": "अधिक फ्लोराइड से दंत व अस्थि फ्लोरोसिस होता है। घेंघा आयोडीन की कमी से होता है।"}}, {"a": 2, "en": {"q": "Arsenic contamination of groundwater, causing skin lesions and skin cancer, is most serious in:", "o": ["Thar desert, Rajasthan", "Coastal Kerala", "Ganga plains, WB & Bihar", "Deccan plateau"], "e": "Arsenic above 0.01 mg/L is found in West Bengal, Bihar and UP groundwater. Rajasthan's main problem is fluoride (trap)."}, "hi": {"q": "भूजल का आर्सेनिक संदूषण, जो त्वचा के घाव और त्वचा कैंसर पैदा करता है, सबसे गंभीर कहाँ है?", "o": ["थार मरुस्थल, राजस्थान", "तटीय केरल", "गंगा मैदान, प. बंगाल व बिहार", "दक्कन का पठार"], "e": "0.01 mg/L से अधिक आर्सेनिक प. बंगाल, बिहार और UP के भूजल में मिलता है। राजस्थान की मुख्य समस्या फ्लोराइड है (ट्रैप)।"}}, {"a": 3, "en": {"q": "Excess nitrate (above 45 mg/L) in drinking water causes a condition in infants called:", "o": ["Minamata disease", "Itai-itai disease", "Black-foot disease", "Methaemoglobinaemia"], "e": "Blue-baby syndrome – nitrate reduces the blood's ability to carry oxygen."}, "hi": {"q": "पेयजल में अधिक नाइट्रेट (45 mg/L से ऊपर) शिशुओं में कौन-सी स्थिति पैदा करता है?", "o": ["मिनामाटा रोग", "इटाई-इटाई रोग", "ब्लैक-फ़ुट रोग", "मेथीमोग्लोबिनीमिया"], "e": "ब्लू-बेबी सिंड्रोम – नाइट्रेट रक्त की ऑक्सीजन ले जाने की क्षमता घटाता है।"}}, {"a": 2, "en": {"q": "Which stage of sewage treatment uses microbes, such as activated sludge, to reduce BOD?", "o": ["Preliminary", "Primary", "Secondary", "Tertiary"], "e": "Primary = physical settling; secondary = biological; tertiary = nutrients and pathogens."}, "hi": {"q": "सीवेज उपचार का कौन-सा चरण BOD घटाने के लिए सूक्ष्मजीवों (जैसे सक्रियित आपंक – activated sludge) का उपयोग करता है?", "o": ["प्रारंभिक (Preliminary)", "प्राथमिक (Primary)", "द्वितीयक (Secondary)", "तृतीयक (Tertiary)"], "e": "प्राथमिक = भौतिक निःसादन; द्वितीयक = जैविक; तृतीयक = पोषक तत्व व रोगजनक हटाना।"}}, {"a": 1, "en": {"q": "Integrated Pest Management (IPM) mainly aims to:", "o": ["Spray chemicals on a fixed calendar", "Combine biological and minimal chemical control", "Stop all methods of pest control", "Use only genetically modified seeds"], "e": "IPM combines biological, cultural and need-based chemical methods to reduce soil pollution."}, "hi": {"q": "समेकित कीट प्रबंधन (IPM) का मुख्य उद्देश्य है:", "o": ["तय कैलेंडर पर रसायनों का छिड़काव", "जैविक और न्यूनतम रासायनिक नियंत्रण का संयोजन", "कीट नियंत्रण के सभी तरीके बंद करना", "केवल आनुवंशिक रूप से संशोधित बीज उपयोग"], "e": "IPM मृदा प्रदूषण घटाने के लिए जैविक, कृषि-पद्धति और आवश्यकता-आधारित रासायनिक तरीकों को जोड़ता है।"}}, {"a": 0, "en": {"q": "Which farming practice helps reduce soil pollution?", "o": ["Using bio-fertilisers and compost", "Doubling the urea dose every season", "Burning crop stubble in fields", "Irrigating with untreated effluent"], "e": "Organic and bio-fertilisers do not leave toxic salts or residues in the soil."}, "hi": {"q": "कौन-सी कृषि पद्धति मृदा प्रदूषण घटाने में सहायक है?", "o": ["जैव-उर्वरक और कम्पोस्ट का उपयोग", "हर मौसम में यूरिया की मात्रा दोगुनी करना", "खेतों में फ़सल अवशेष जलाना", "अनुपचारित बहिःस्राव से सिंचाई"], "e": "जैविक और जैव-उर्वरक मृदा में विषैले लवण या अवशेष नहीं छोड़ते।"}}, {"a": 1, "en": {"q": "If the sound level near a road rises from 60 dB to 80 dB, the sound intensity becomes:", "o": ["2 times", "100 times", "20 times", "1000 times"], "e": "Every +10 dB = 10× intensity, so +20 dB = 10 × 10 = 100 times."}, "hi": {"q": "यदि किसी सड़क के पास ध्वनि स्तर 60 dB से बढ़कर 80 dB हो जाए, तो ध्वनि की तीव्रता हो जाती है:", "o": ["2 गुना", "100 गुना", "20 गुना", "1000 गुना"], "e": "हर +10 dB = 10 गुना तीव्रता, इसलिए +20 dB = 10 × 10 = 100 गुना।"}}, {"a": 3, "en": {"q": "Under the Noise Pollution Rules, the daytime noise limit in a silence zone is:", "o": ["40 dB(A)", "55 dB(A)", "65 dB(A)", "50 dB(A)"], "e": "Silence zone: 50 dB day / 40 dB night. 40 is the night value (trap)."}, "hi": {"q": "ध्वनि प्रदूषण नियमों के अनुसार शांत क्षेत्र (silence zone) में दिन की ध्वनि सीमा है:", "o": ["40 dB(A)", "55 dB(A)", "65 dB(A)", "50 dB(A)"], "e": "शांत क्षेत्र: दिन 50 dB / रात 40 dB। 40 रात का मान है (ट्रैप)।"}}, {"a": 1, "en": {"q": "A silence zone is an area of at least ______ around hospitals, schools and courts.", "o": ["50 m", "100 m", "200 m", "500 m"], "e": "The rule is 100 metres."}, "hi": {"q": "शांत क्षेत्र अस्पतालों, स्कूलों और न्यायालयों के चारों ओर कम से कम ______ का क्षेत्र है।", "o": ["50 m", "100 m", "200 m", "500 m"], "e": "नियम 100 मीटर का है।"}}, {"a": 2, "en": {"q": "The Noise Pollution (Regulation and Control) Rules, 2000 were framed under:", "o": ["Air Act, 1981", "Factories Act, 1948", "EP Act, 1986", "Motor Vehicles Act, 1988"], "e": "They were framed under the Environment (Protection) Act, 1986. Noise was added to the Air Act separately in 1987."}, "hi": {"q": "ध्वनि प्रदूषण (विनियमन एवं नियंत्रण) नियम, 2000 किसके अंतर्गत बनाए गए?", "o": ["वायु अधिनियम, 1981", "कारखाना अधिनियम, 1948", "EP अधिनियम, 1986", "मोटर वाहन अधिनियम, 1988"], "e": "ये पर्यावरण (संरक्षण) अधिनियम, 1986 के अंतर्गत बने। शोर को वायु अधिनियम में अलग से 1987 में जोड़ा गया।"}}, {"a": 0, "en": {"q": "Long-term exposure to noise above 85–90 dB mainly leads to:", "o": ["Permanent hearing loss", "Lower blood pressure", "Sharper concentration", "Deeper, longer sleep"], "e": "Other effects of prolonged noise: high BP, stress and sleep disturbance."}, "hi": {"q": "85–90 dB से अधिक शोर के लंबे संपर्क से मुख्यतः होता है:", "o": ["स्थायी श्रवण ह्रास", "रक्तचाप में कमी", "बेहतर एकाग्रता", "गहरी, लंबी नींद"], "e": "लंबे समय तक शोर के अन्य प्रभाव: उच्च रक्तचाप, तनाव और नींद में बाधा।"}}, {"a": 3, "en": {"q": "Rows of dense trees planted along highways and around industries to absorb noise are called:", "o": ["Shelter belt", "Buffer zone", "Hedgerow", "Green muffler"], "e": "A green muffler controls noise in its path. A shelter belt is a windbreak (trap)."}, "hi": {"q": "शोर अवशोषित करने के लिए राजमार्गों और उद्योगों के चारों ओर लगाई गई घने पेड़ों की पंक्तियाँ कहलाती हैं:", "o": ["शेल्टर बेल्ट", "बफ़र ज़ोन", "हेजरो (बाड़)", "ग्रीन मफ़लर"], "e": "ग्रीन मफ़लर मार्ग में शोर नियंत्रित करता है। शेल्टर बेल्ट वायु-अवरोधक है (ट्रैप)।"}}, {"a": 0, "en": {"q": "Using ear plugs and ear muffs controls noise at the:", "o": ["Receiver", "Source", "Path", "All three"], "e": "Source = silencers; path = barriers and green belts; receiver = ear protection."}, "hi": {"q": "ईयर प्लग और ईयर मफ़ का उपयोग शोर को कहाँ नियंत्रित करता है?", "o": ["ग्राही (Receiver) पर", "स्रोत (Source) पर", "मार्ग (Path) में", "तीनों पर"], "e": "स्रोत = साइलेंसर; मार्ग = अवरोध व हरित पट्टियाँ; ग्राही = कानों की सुरक्षा।"}}];
+
+const N = Q.length, TOTAL = Math.round(N*48), K = "abcd";
+let lang = "en", cur = 0, ans, visited, marked, left, tick, done = false;
+const $ = id => document.getElementById(id);
+const t = k => UI[lang][k];
+
+function setLang(l){
+  lang = l;
+  document.documentElement.lang = l;
+  document.body.classList.toggle("hi", l === "hi");
+  $("bEn").setAttribute("aria-pressed", l === "en");
+  $("bHi").setAttribute("aria-pressed", l === "hi");
+  document.querySelectorAll("[data-t]").forEach(el => { const v = t(el.dataset.t); if (typeof v === "string") el.textContent = v; });
+  $("rules").innerHTML = t("rules").map(r => `<li>${r}</li>`).join("");
+  $("legend").innerHTML = t("legend").map(([c,l]) => `<span><i style="background:${c}"></i>${l}</span>`).join("");
+  if ($("quiz").style.display === "grid") renderQ();
+  if (done) renderResult();
+}
+
+function reset(){
+  ans = Array(N).fill(null); visited = Array(N).fill(false); marked = Array(N).fill(false);
+  cur = 0; left = TOTAL; done = false;
+}
+
+function startTest(){
+  reset();
+  $("start").style.display = "none"; $("result").style.display = "none";
+  $("quiz").style.display = "grid"; $("timer").style.display = "block";
+  renderQ(); updTimer();
+  clearInterval(tick);
+  tick = setInterval(() => { left--; updTimer(); if (left <= 0) { finish(true); } }, 1000);
+  window.scrollTo(0,0);
+}
+
+function updTimer(){
+  const m = Math.floor(Math.max(left,0)/60), s = Math.max(left,0)%60;
+  $("timer").textContent = `${String(m).padStart(2,"0")}:${String(s).padStart(2,"0")}`;
+  $("timer").classList.toggle("low", left <= 120);
+}
+
+function renderQ(){
+  visited[cur] = true;
+  const q = Q[cur][lang];
+  $("qno").textContent = `${t("q")} ${cur+1} ${t("of")} ${N}`;
+  $("qtext").textContent = q.q;
+  $("opts").innerHTML = q.o.map((o,i) =>
+    `<button class="opt" role="radio" aria-checked="${ans[cur]===i}" data-i="${i}"><span class="k">${K[i]}</span><span>${o}</span></button>`).join("");
+  $("opts").querySelectorAll(".opt").forEach(b => b.onclick = () => { ans[cur] = +b.dataset.i; renderQ(); });
+  $("prevBtn").disabled = cur === 0;
+  renderPal();
+}
+
+function renderPal(){
+  $("pal").innerHTML = Q.map((_,i) => {
+    let c = "";
+    if (marked[i]) c = ans[i] !== null ? "mka" : "mk";
+    else if (ans[i] !== null) c = "ans";
+    else if (visited[i]) c = "na";
+    return `<button class="${c}${i===cur?" cur":""}" data-i="${i}" aria-label="${t("q")} ${i+1}">${i+1}</button>`;
+  }).join("");
+  $("pal").querySelectorAll("button").forEach(b => b.onclick = () => { cur = +b.dataset.i; renderQ(); });
+  const a = ans.filter(x => x !== null).length, mk = marked.filter(Boolean).length;
+  const nv = visited.filter(v => !v).length, na = visited.filter((v,i) => v && ans[i] === null).length;
+  $("counts").innerHTML = [[t("cAns"),a],[t("cNa"),na],[t("cMk"),mk],[t("cNv"),nv]].map(([l,v]) => `<div><span>${l}</span><b>${v}</b></div>`).join("");
+}
+
+function go(d){ if (cur + d >= 0 && cur + d < N) { cur += d; renderQ(); window.scrollTo({top:0}); } }
+
+function askSubmit(){
+  const a = ans.filter(x => x !== null).length;
+  $("mBody").textContent = UI[lang].mBody(a, N - a);
+  $("modal").style.display = "grid"; $("mYes").focus();
+}
+
+function finish(auto){
+  clearInterval(tick); done = true;
+  $("modal").style.display = "none";
+  $("quiz").style.display = "none"; $("timer").style.display = "none";
+  $("result").style.display = "block";
+  renderResult();
+  if (auto) alert(t("timeUp"));
+  window.scrollTo(0,0);
+}
+
+function renderResult(){
+  let c = 0, w = 0;
+  Q.forEach((q,i) => { if (ans[i] === null) return; ans[i] === q.a ? c++ : w++; });
+  const s = N - c - w, score = Math.round((c - w/3) * 100) / 100;
+  const acc = c + w ? Math.round(c / (c + w) * 100) : 0;
+  $("scoreVal").textContent = score;
+  const pct = Math.max(0, score) / N * 100;
+  $("ring").style.background = `conic-gradient(var(--leaf) ${pct}%, var(--chip) 0)`;
+  $("stats").innerHTML = [[t("sC"),c,"var(--leaf)"],[t("sW"),w,"var(--red)"],[t("sS"),s,"var(--amber)"],[t("sA"),acc+"%","var(--ink)"]]
+    .map(([l,v,col]) => `<div class="stat"><strong style="color:${col}">${v}</strong><span>${l}</span></div>`).join("");
+  const v = t("verdicts"); $("verdict").textContent = score < 10 ? v[0] : score < 16 ? v[1] : score < 21 ? v[2] : v[3];
+  $("review").innerHTML = Q.map((q,i) => {
+    const d = q[lang], u = ans[i], st = u === null ? "s" : u === q.a ? "c" : "w";
+    const tag = st === "c" ? t("tC") : st === "w" ? t("tW") : t("tS");
+    const opts = d.o.map((o,j) => `<li class="${j===q.a?"right":(j===u?"wrong":"")}">(${K[j]}) ${o}</li>`).join("");
+    return `<div class="rv ${st}"><span class="tag">${t("q")} ${i+1} · ${tag}</span><p>${d.q}</p><ul>${opts}</ul><div class="exp"><b>${t("ans")}: (${K[q.a]})</b> – ${d.e}</div></div>`;
+  }).join("");
+}
+
+$("bEn").onclick = () => setLang("en");
+$("bHi").onclick = () => setLang("hi");
+$("startBtn").onclick = startTest;
+$("retryBtn").onclick = startTest;
+$("prevBtn").onclick = () => go(-1);
+$("nextBtn").onclick = () => { if (cur === N-1) renderQ(); else go(1); };
+$("clearBtn").onclick = () => { ans[cur] = null; renderQ(); };
+$("markBtn").onclick = () => { marked[cur] = !marked[cur]; if (cur < N-1) go(1); else renderQ(); };
+$("submitBtn").onclick = askSubmit;
+$("mNo").onclick = () => { $("modal").style.display = "none"; };
+$("mYes").onclick = () => finish(false);
+document.addEventListener("keydown", e => {
+  if ($("modal").style.display === "grid" && e.key === "Escape") $("modal").style.display = "none";
+  if ($("quiz").style.display !== "grid" || $("modal").style.display === "grid") return;
+  if (["1","2","3","4"].includes(e.key)) { ans[cur] = +e.key - 1; renderQ(); }
+  if (e.key === "ArrowRight") go(1);
+  if (e.key === "ArrowLeft") go(-1);
+});
+reset(); setLang("en");
+</script>
+</body>
+</html>
