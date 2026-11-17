@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Environment Set 4 – RRB JE CBT-2 | THE EXAM ENGINEER</title>
+<meta name="description" content="RRB JE CBT-2 Environment Set 4 – Waste Management. 25 bilingual PYQ-based questions with 1/3 negative marking. THE EXAM ENGINEER.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Noto+Sans+Devanagari:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --forest:#0f4a2d; --forest-2:#0b3320; --leaf:#16a34a; --leaf-soft:#e7f6ec;
+  --amber:#f59e0b; --red:#dc2626; --red-soft:#fdecec; --violet:#7c3aed;
+  --bg:#f3f6f2; --card:#ffffff; --ink:#17251d; --muted:#5b6b62; --line:#d8e2db; --chip:#e9eeea;
+  --head-ink:#ffffff;
+}
+@media (prefers-color-scheme: dark){
+  :root{
+    color-scheme: dark;
+    --forest:#0f3d26; --forest-2:#0a2a1a; --leaf:#34c26a; --leaf-soft:#123222;
+    --amber:#fbbf24; --red:#f87171; --red-soft:#3a1717; --violet:#a78bfa;
+    --bg:#0e1511; --card:#16211b; --ink:#e6efe9; --muted:#9db0a5; --line:#2a3a31; --chip:#223029;
+    --head-ink:#ffffff;
+  }
+}
+*{box-sizing:border-box}
+html,body{margin:0}
+body{font-family:"Poppins","Noto Sans Devanagari",system-ui,sans-serif;background:var(--bg);color:var(--ink);line-height:1.55;-webkit-text-size-adjust:100%}
+body.hi{font-family:"Noto Sans Devanagari","Poppins",system-ui,sans-serif}
+button{font:inherit;cursor:pointer}
+button:focus-visible,a:focus-visible{outline:3px solid var(--amber);outline-offset:2px}
+a{color:inherit}
+
+/* header */
+header{background:linear-gradient(160deg,var(--forest),var(--forest-2));color:var(--head-ink);padding:12px 16px}
+.hwrap{max-width:1040px;margin:0 auto;display:flex;align-items:center;gap:12px;flex-wrap:wrap}
+.logo{width:40px;height:40px;border-radius:50%;background:#22c55e;color:#0b3320;display:grid;place-items:center;font-weight:700;flex:none}
+.brand{flex:1;min-width:180px}
+.brand b{display:block;font-size:16px;letter-spacing:.3px}
+.brand a{font-size:12px;opacity:.85;text-decoration:none}
+.lang{display:flex;background:rgba(255,255,255,.12);border-radius:999px;padding:3px}
+.lang button{border:0;background:transparent;color:#fff;padding:6px 14px;border-radius:999px;font-size:13px;font-weight:600}
+.lang button[aria-pressed="true"]{background:#fff;color:var(--forest)}
+.timer{font-variant-numeric:tabular-nums;font-weight:700;background:rgba(255,255,255,.12);padding:6px 12px;border-radius:8px;font-size:15px;display:none}
+.timer.low{background:var(--red);color:#fff}
+
+main{max-width:1040px;margin:0 auto;padding:18px 14px 40px}
+.panel{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:20px}
+
+/* start screen */
+.start h1{font-size:clamp(22px,4.6vw,32px);line-height:1.25;margin:4px 0 6px;color:var(--ink)}
+.start .sub{color:var(--muted);margin:0 0 16px}
+.facts{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin:14px 0 18px}
+.fact{border:1px solid var(--line);border-radius:10px;padding:10px;text-align:center}
+.fact strong{display:block;font-size:22px;color:var(--leaf)}
+.fact span{font-size:12.5px;color:var(--muted)}
+.rules{margin:0 0 18px;padding-left:20px}
+.rules li{margin:4px 0}
+.legend{display:flex;flex-wrap:wrap;gap:12px;font-size:13px;color:var(--muted);margin-bottom:18px}
+.legend i{display:inline-block;width:14px;height:14px;border-radius:4px;vertical-align:-2px;margin-right:5px}
+.btn{border:0;border-radius:10px;padding:11px 18px;font-weight:600;font-size:15px}
+.btn-main{background:var(--leaf);color:#fff}
+.btn-ghost{background:var(--chip);color:var(--ink)}
+.btn-warn{background:var(--violet);color:#fff}
+.btn-red{background:var(--red);color:#fff}
+.copy{font-size:12px;color:var(--muted);margin-top:16px}
+
+/* quiz */
+.quiz{display:none;grid-template-columns:1fr 270px;gap:16px;align-items:start}
+.qhead{display:flex;justify-content:space-between;align-items:center;margin-bottom:10px;color:var(--muted);font-size:14px}
+.qhead b{color:var(--ink)}
+.marks{font-size:12.5px}
+.qtext{font-size:17px;font-weight:500;margin:0 0 16px}
+body.hi .qtext{font-size:18px}
+.opts{display:grid;gap:10px}
+.opt{display:flex;gap:12px;align-items:flex-start;text-align:left;width:100%;background:transparent;border:1.5px solid var(--line);border-radius:10px;padding:12px 14px;color:var(--ink)}
+.opt .k{flex:none;width:28px;height:28px;border-radius:50%;border:1.5px solid var(--line);display:grid;place-items:center;font-weight:600;font-size:13px}
+.opt[aria-checked="true"]{border-color:var(--leaf);background:var(--leaf-soft)}
+.opt[aria-checked="true"] .k{background:var(--leaf);border-color:var(--leaf);color:#fff}
+.actions{display:flex;flex-wrap:wrap;gap:8px;margin-top:18px}
+.actions .sp{flex:1}
+.side h3{margin:0 0 10px;font-size:15px}
+.pal{display:grid;grid-template-columns:repeat(5,1fr);gap:7px}
+.pal button{border:0;border-radius:8px;height:38px;font-weight:600;background:var(--chip);color:var(--ink)}
+.pal button.ans{background:var(--leaf);color:#fff}
+.pal button.na{background:var(--red);color:#fff}
+.pal button.mk{background:var(--violet);color:#fff}
+.pal button.mka{background:var(--violet);color:#fff;box-shadow:inset 0 -5px 0 var(--leaf)}
+.pal button.cur{outline:3px solid var(--amber);outline-offset:1px}
+.counts{font-size:13px;color:var(--muted);margin:12px 0}
+.counts div{display:flex;justify-content:space-between}
+
+/* result */
+.result{display:none}
+.score{display:flex;flex-wrap:wrap;gap:18px;align-items:center;margin-bottom:16px}
+.ring{width:130px;height:130px;border-radius:50%;display:grid;place-items:center;flex:none}
+.ring div{width:104px;height:104px;border-radius:50%;background:var(--card);display:grid;place-items:center;text-align:center}
+.ring strong{font-size:26px;line-height:1}
+.ring span{font-size:12px;color:var(--muted)}
+.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;flex:1;min-width:260px}
+.stat{border:1px solid var(--line);border-radius:10px;padding:10px;text-align:center}
+.stat strong{display:block;font-size:20px}
+.stat span{font-size:12.5px;color:var(--muted)}
+.verdict{margin:0 0 16px;font-weight:500}
+.review{margin-top:18px;display:grid;gap:12px}
+.rv{border:1px solid var(--line);border-left:5px solid var(--line);border-radius:10px;padding:12px 14px}
+.rv.c{border-left-color:var(--leaf)} .rv.w{border-left-color:var(--red)} .rv.s{border-left-color:var(--amber)}
+.rv .tag{font-size:12px;font-weight:600}
+.rv.c .tag{color:var(--leaf)} .rv.w .tag{color:var(--red)} .rv.s .tag{color:var(--amber)}
+.rv p{margin:6px 0}
+.rv ul{list-style:none;padding:0;margin:6px 0;display:grid;gap:4px}
+.rv li{padding:5px 9px;border-radius:7px;font-size:14.5px}
+.rv li.right{background:var(--leaf-soft);color:var(--leaf);font-weight:600}
+.rv li.wrong{background:var(--red-soft);color:var(--red);text-decoration:line-through}
+.exp{font-size:14px;color:var(--muted);background:var(--chip);border-radius:8px;padding:8px 10px}
+.join{display:flex;flex-wrap:wrap;gap:10px;align-items:center;justify-content:space-between;background:var(--leaf-soft);border:1px solid var(--line);border-radius:12px;padding:12px 14px;margin-top:16px}
+.join a.btn{text-decoration:none}
+footer{text-align:center;font-size:12.5px;color:var(--muted);padding:0 14px 30px}
+footer a{color:var(--leaf);font-weight:600;text-decoration:none}
+
+/* modal */
+.modal{position:fixed;inset:0;background:rgba(0,0,0,.5);display:none;place-items:center;padding:16px;z-index:10}
+.modal .box{background:var(--card);color:var(--ink);border-radius:14px;max-width:420px;width:100%;padding:20px}
+.modal h3{margin:0 0 8px}
+.modal .row{display:flex;gap:8px;justify-content:flex-end;margin-top:16px}
+
+@media (max-width:820px){
+  .quiz{grid-template-columns:1fr}
+  .facts{grid-template-columns:repeat(2,1fr)}
+  .stats{grid-template-columns:repeat(2,1fr)}
+}
+@media (prefers-reduced-motion:no-preference){
+  .opt,.pal button{transition:background .15s,border-color .15s}
+}
+</style>
+</head>
+<body>
+<header>
+  <div class="hwrap">
+    <div class="logo">TE</div>
+    <div class="brand"><b>THE EXAM ENGINEER</b><a href="https://t.me/the_exam_engineer" target="_blank" rel="noopener">t.me/the_exam_engineer</a></div>
+    <div class="timer" id="timer" aria-live="off">20:00</div>
+    <div class="lang" role="group" aria-label="Language">
+      <button id="bEn" aria-pressed="true">English</button>
+      <button id="bHi" aria-pressed="false">हिंदी</button>
+    </div>
+  </div>
+</header>
+
+<main>
+  <!-- START -->
+  <section class="panel start" id="start">
+    <div class="sub" data-t="kicker"></div>
+    <h1 data-t="title"></h1>
+    <p class="sub" data-t="subtitle"></p>
+    <div class="facts">
+      <div class="fact"><strong id="nQ">25</strong><span data-t="fQ"></span></div>
+      <div class="fact"><strong id="nT">20</strong><span data-t="fT"></span></div>
+      <div class="fact"><strong>+1</strong><span data-t="fR"></span></div>
+      <div class="fact"><strong>−⅓</strong><span data-t="fW"></span></div>
+    </div>
+    <ul class="rules" id="rules"></ul>
+    <div class="legend" id="legend"></div>
+    <button class="btn btn-main" id="startBtn" data-t="start"></button>
+    <p class="copy" data-t="copy"></p>
+  </section>
+
+  <!-- QUIZ -->
+  <section class="quiz" id="quiz">
+    <div class="panel">
+      <div class="qhead"><span><b id="qno"></b></span><span class="marks" data-t="marks"></span></div>
+      <p class="qtext" id="qtext"></p>
+      <div class="opts" id="opts" role="radiogroup"></div>
+      <div class="actions">
+        <button class="btn btn-ghost" id="prevBtn" data-t="prev"></button>
+        <button class="btn btn-ghost" id="clearBtn" data-t="clear"></button>
+        <span class="sp"></span>
+        <button class="btn btn-warn" id="markBtn" data-t="mark"></button>
+        <button class="btn btn-main" id="nextBtn" data-t="next"></button>
+      </div>
+    </div>
+    <aside class="panel side">
+      <h3 data-t="palette"></h3>
+      <div class="pal" id="pal"></div>
+      <div class="counts" id="counts"></div>
+      <button class="btn btn-red" style="width:100%" id="submitBtn" data-t="submit"></button>
+    </aside>
+  </section>
+
+  <!-- RESULT -->
+  <section class="panel result" id="result">
+    <h2 data-t="resTitle" style="margin-top:0"></h2>
+    <div class="score">
+      <div class="ring" id="ring"><div><strong id="scoreVal"></strong><span data-t="outOf"></span></div></div>
+      <div class="stats" id="stats"></div>
+    </div>
+    <p class="verdict" id="verdict"></p>
+    <div style="display:flex;gap:8px;flex-wrap:wrap">
+      <button class="btn btn-main" id="retryBtn" data-t="retry"></button>
+    </div>
+    <div class="join">
+      <span data-t="joinTxt"></span>
+      <a class="btn btn-main" href="https://t.me/the_exam_engineer" target="_blank" rel="noopener" data-t="joinBtn"></a>
+    </div>
+    <h3 data-t="revTitle" style="margin:22px 0 0"></h3>
+    <div class="review" id="review"></div>
+  </section>
+</main>
+
+<footer>© 2026 THE EXAM ENGINEER · <span data-t="foot"></span> · <a href="https://t.me/the_exam_engineer" target="_blank" rel="noopener">t.me/the_exam_engineer</a></footer>
+
+<div class="modal" id="modal" role="dialog" aria-modal="true" aria-labelledby="mTitle">
+  <div class="box">
+    <h3 id="mTitle" data-t="mTitle"></h3>
+    <div id="mBody"></div>
+    <div class="row">
+      <button class="btn btn-ghost" id="mNo" data-t="mNo"></button>
+      <button class="btn btn-red" id="mYes" data-t="mYes"></button>
+    </div>
+  </div>
+</div>
+
+<script>
+const UI = {
+ en:{kicker:"RRB JE CBT-2 (2026) · Basics of Environment & Pollution Control",
+  title:"Environment Set 4 – Waste Management",
+  subtitle:"Conceptual, RRB JE PYQ based questions from Chapter 6 (Waste Management) of the Environment One Stop Solution.",
+  fQ:"Questions",fT:"Minutes",fR:"Per correct answer",fW:"Per wrong answer",
+  rules:["Timer follows the CBT-2 pace: 150 questions in 120 minutes = 48 seconds per question.","Each correct answer gives +1 mark; each wrong answer deducts 1/3 mark. Unattempted questions get 0.","You can switch between English and Hindi at any time.","The test is submitted automatically when the time is over."],
+  legend:[["var(--chip)","Not visited"],["var(--red)","Not answered"],["var(--leaf)","Answered"],["var(--violet)","Marked for review"]],
+  start:"Start test",copy:"© 2026 THE EXAM ENGINEER. Free for practice. Do not copy or re-brand.",
+  marks:"+1 / −⅓",prev:"Previous",clear:"Clear response",mark:"Mark & next",next:"Save & next",palette:"Question palette",submit:"Submit test",
+  q:"Question",of:"of",cAns:"Answered",cNa:"Not answered",cMk:"Marked",cNv:"Not visited",
+  mTitle:"Submit the test?",mNo:"Go back",mYes:"Submit",
+  mBody:(a,u)=>`You have answered ${a} of 25 questions. ${u} are unanswered.`,
+  resTitle:"Your result",outOf:"out of 25",
+  sC:"Correct",sW:"Wrong",sS:"Skipped",sA:"Accuracy",
+  verdicts:["Revise Chapter 6 of the notes and try again.","Good start. Read the explanations for the questions you missed.","Strong score. Keep this accuracy in the exam.","Excellent. You are ready for these 10 marks."],
+  retry:"Retake test",joinTxt:"Sets 1, 2, 3 and the full Environment notes are available on the channel.",joinBtn:"Join THE EXAM ENGINEER",
+  revTitle:"Answers with explanation",tC:"Correct",tW:"Wrong",tS:"Not attempted",yours:"Your answer",ans:"Answer",
+  foot:"RRB JE CBT-2 Environment Set 4",timeUp:"Time is over. Your test has been submitted."},
+ hi:{kicker:"RRB JE CBT-2 (2026) · पर्यावरण की मूल बातें एवं प्रदूषण नियंत्रण",
+  title:"पर्यावरण सेट 4 – अपशिष्ट प्रबंधन",
+  subtitle:"पर्यावरण वन स्टॉप सॉल्यूशन के अध्याय 6 (अपशिष्ट प्रबंधन) से अवधारणात्मक, RRB JE PYQ आधारित प्रश्न।",
+  fQ:"प्रश्न",fT:"मिनट",fR:"प्रति सही उत्तर",fW:"प्रति गलत उत्तर",
+  rules:["टाइमर CBT-2 की गति पर है: 120 मिनट में 150 प्रश्न = प्रति प्रश्न 48 सेकंड।","हर सही उत्तर पर +1 अंक; हर गलत उत्तर पर 1/3 अंक कटेगा। छोड़े गए प्रश्न पर 0।","आप कभी भी English और हिंदी के बीच बदल सकते हैं।","समय समाप्त होते ही टेस्ट अपने-आप सबमिट हो जाएगा।"],
+  legend:[["var(--chip)","नहीं देखा"],["var(--red)","उत्तर नहीं दिया"],["var(--leaf)","उत्तर दिया"],["var(--violet)","रिव्यू हेतु चिह्नित"]],
+  start:"टेस्ट शुरू करें",copy:"© 2026 THE EXAM ENGINEER. अभ्यास हेतु निःशुल्क। कॉपी या री-ब्रांड न करें।",
+  marks:"+1 / −⅓",prev:"पिछला",clear:"उत्तर हटाएँ",mark:"चिह्नित करें व आगे",next:"सेव करें व आगे",palette:"प्रश्न पैलेट",submit:"टेस्ट सबमिट करें",
+  q:"प्रश्न",of:"/",cAns:"उत्तर दिया",cNa:"उत्तर नहीं दिया",cMk:"चिह्नित",cNv:"नहीं देखा",
+  mTitle:"टेस्ट सबमिट करें?",mNo:"वापस जाएँ",mYes:"सबमिट करें",
+  mBody:(a,u)=>`आपने 25 में से ${a} प्रश्नों के उत्तर दिए हैं। ${u} प्रश्न बिना उत्तर के हैं।`,
+  resTitle:"आपका परिणाम",outOf:"25 में से",
+  sC:"सही",sW:"गलत",sS:"छोड़े",sA:"सटीकता",
+  verdicts:["नोट्स का अध्याय 6 दोहराएँ और फिर से प्रयास करें।","अच्छी शुरुआत। जो प्रश्न छूटे उनकी व्याख्या पढ़ें।","बढ़िया स्कोर। परीक्षा में यही सटीकता बनाए रखें।","शानदार। आप इन 10 अंकों के लिए तैयार हैं।"],
+  retry:"टेस्ट दोबारा दें",joinTxt:"सेट 1, 2, 3 और पूरे पर्यावरण नोट्स चैनल पर उपलब्ध हैं।",joinBtn:"THE EXAM ENGINEER से जुड़ें",
+  revTitle:"व्याख्या सहित उत्तर",tC:"सही",tW:"गलत",tS:"प्रयास नहीं किया",yours:"आपका उत्तर",ans:"उत्तर",
+  foot:"RRB JE CBT-2 पर्यावरण सेट 4",timeUp:"समय समाप्त। आपका टेस्ट सबमिट हो गया है।"}
+};
+
+const Q = [{"a": 2, "en": {"q": "Kitchen wet waste is fed into a closed tank without air, where it produces biogas and a nutrient-rich slurry. This process is:", "o": ["Aerobic composting", "Pyrolysis", "Bio-methanation", "Incineration"], "e": "Bio-methanation is anaerobic digestion: wet waste → biogas + slurry. Composting is aerobic."}, "hi": {"q": "रसोई का गीला कचरा बिना हवा वाले बंद टैंक में डाला जाता है, जहाँ इससे बायोगैस और पोषक तत्वों से भरपूर घोल (slurry) बनता है। यह प्रक्रिया है:", "o": ["वायवीय कम्पोस्टिंग", "पायरोलिसिस", "जैव-मीथेनीकरण (Bio-methanation)", "भस्मीकरण"], "e": "जैव-मीथेनीकरण अवायवीय पाचन है: गीला कचरा → बायोगैस + घोल। कम्पोस्टिंग वायवीय (aerobic) होती है।"}}, {"a": 3, "en": {"q": "Which condition is essential for proper composting of biodegradable waste?", "o": ["Complete absence of oxygen", "Heating above 800 °C", "Adding bleaching powder", "Regular turning to let air in"], "e": "Composting is aerobic – turning the heap supplies oxygen to the microbes."}, "hi": {"q": "जैव-निम्नीकरणीय कचरे की उचित कम्पोस्टिंग के लिए कौन-सी स्थिति आवश्यक है?", "o": ["ऑक्सीजन का पूर्ण अभाव", "800 °C से अधिक ताप", "ब्लीचिंग पाउडर मिलाना", "हवा के लिए नियमित पलटना"], "e": "कम्पोस्टिंग वायवीय है – ढेर को पलटने से सूक्ष्मजीवों को ऑक्सीजन मिलती है।"}}, {"a": 0, "en": {"q": "A dairy collects empty glass milk bottles from homes, washes them and refills them with milk. This is an example of:", "o": ["Reuse", "Reduce", "Recycle", "Recover"], "e": "The bottle is used again in the same form. Recycling would mean melting the glass to make new products; reducing means producing less waste in the first place."}, "hi": {"q": "एक डेयरी घरों से दूध की खाली काँच की बोतलें इकट्ठा करती है, उन्हें धोकर फिर से दूध भरती है। यह किसका उदाहरण है?", "o": ["पुनः उपयोग (Reuse)", "कमी (Reduce)", "पुनर्चक्रण (Recycle)", "पुनर्प्राप्ति (Recover)"], "e": "बोतल उसी रूप में दोबारा उपयोग होती है। पुनर्चक्रण में काँच को पिघलाकर नए उत्पाद बनते हैं; कमी का अर्थ है शुरू से ही कम कचरा पैदा करना।"}}, {"a": 3, "en": {"q": "Biogas produced from anaerobic digestion of wet waste mainly contains:", "o": ["Hydrogen", "Carbon monoxide", "Nitrogen", "Methane"], "e": "Biogas is about 50–70% methane; most of the rest is CO₂."}, "hi": {"q": "गीले कचरे के अवायवीय पाचन से बनी बायोगैस में मुख्यतः होती है:", "o": ["हाइड्रोजन", "कार्बन मोनोऑक्साइड", "नाइट्रोजन", "मीथेन"], "e": "बायोगैस में लगभग 50–70% मीथेन होती है; शेष में अधिकतर CO₂।"}}, {"a": 2, "en": {"q": "According to the waste management hierarchy, which option is the most preferred?", "o": ["Recycling", "Energy recovery", "Waste reduction", "Sanitary landfill"], "e": "Prevention/Reduce → Reuse → Recycle → Recovery → Disposal. Landfill is the last option."}, "hi": {"q": "अपशिष्ट प्रबंधन पदानुक्रम के अनुसार सबसे अधिक वरीय विकल्प कौन-सा है?", "o": ["पुनर्चक्रण", "ऊर्जा पुनर्प्राप्ति", "अपशिष्ट में कमी", "सैनिटरी लैंडफ़िल"], "e": "रोकथाम/कमी → पुनः उपयोग → पुनर्चक्रण → पुनर्प्राप्ति → निपटान। लैंडफ़िल अंतिम विकल्प है।"}}, {"a": 0, "en": {"q": "The main environmental drawback of incinerating mixed municipal waste that contains PVC plastic is:", "o": ["Release of dioxins and furans", "Increase in total waste volume", "Formation of nutrient-rich compost", "Generation of leachate in soil"], "e": "Burning chlorinated plastics releases highly toxic dioxins and furans. Incineration actually reduces waste volume."}, "hi": {"q": "PVC प्लास्टिक युक्त मिश्रित नगरीय कचरे के भस्मीकरण की मुख्य पर्यावरणीय कमी है:", "o": ["डाइऑक्सिन और फ़्यूरान का उत्सर्जन", "कुल कचरे के आयतन में वृद्धि", "पोषक तत्वों से भरपूर खाद बनना", "मृदा में निक्षालित द्रव बनना"], "e": "क्लोरीनयुक्त प्लास्टिक जलाने से अत्यंत विषैले डाइऑक्सिन और फ़्यूरान निकलते हैं। भस्मीकरण वास्तव में कचरे का आयतन घटाता है।"}}, {"a": 0, "en": {"q": "Thermal decomposition of waste plastic and tyres at high temperature in the absence of oxygen, producing oil, gas and char, is called:", "o": ["Pyrolysis", "Incineration", "Composting", "Calcination"], "e": "Pyrolysis needs no oxygen; incineration is burning in excess air."}, "hi": {"q": "ऑक्सीजन की अनुपस्थिति में उच्च ताप पर प्लास्टिक व टायर कचरे का तापीय अपघटन, जिससे तेल, गैस और चार (char) बनते हैं, कहलाता है:", "o": ["पायरोलिसिस (Pyrolysis)", "भस्मीकरण (Incineration)", "कम्पोस्टिंग", "निस्तापन (Calcination)"], "e": "पायरोलिसिस में ऑक्सीजन नहीं चाहिए; भस्मीकरण अधिक वायु में जलाना है।"}}, {"a": 0, "en": {"q": "What distinguishes a sanitary landfill from an open dump?", "o": ["Liner, leachate drain and daily cover", "Waste is burnt openly every night", "It is built inside river floodplains", "Waste is left uncovered for birds"], "e": "An impermeable liner, leachate collection and daily soil cover protect groundwater and stop pests."}, "hi": {"q": "सैनिटरी लैंडफ़िल को खुले डंप से क्या अलग करता है?", "o": ["अस्तर, निक्षालित द्रव नाली और दैनिक आवरण", "हर रात कचरा खुले में जलाया जाता है", "इसे नदी के बाढ़ क्षेत्र में बनाया जाता है", "कचरा पक्षियों के लिए खुला छोड़ा जाता है"], "e": "अभेद्य अस्तर (liner), निक्षालित द्रव संग्रहण और दैनिक मिट्टी का आवरण भूजल की रक्षा करते हैं और कीटों को रोकते हैं।"}}, {"a": 1, "en": {"q": "The contaminated liquid that drains out of a landfill when rainwater percolates through the waste is called:", "o": ["Sludge", "Leachate", "Slurry", "Brine"], "e": "Leachate carries heavy metals and organics and can pollute groundwater if there is no liner."}, "hi": {"q": "जब वर्षा जल कचरे से रिसकर लैंडफ़िल से बाहर निकलता है, तो उस दूषित द्रव को कहते हैं:", "o": ["आपंक (Sludge)", "निक्षालित द्रव (Leachate)", "घोल (Slurry)", "लवण-जल (Brine)"], "e": "निक्षालित द्रव में भारी धातुएँ और कार्बनिक पदार्थ होते हैं; अस्तर न हो तो यह भूजल को प्रदूषित कर सकता है।"}}, {"a": 0, "en": {"q": "The dry, combustible part of municipal waste is shredded, dried and made into pellets that are burnt in cement kilns. This product is called:", "o": ["Refuse-derived fuel (RDF)", "Vermicompost", "Fly ash", "Leachate"], "e": "RDF is a waste-to-energy route for non-recyclable dry waste."}, "hi": {"q": "नगरीय कचरे के सूखे, ज्वलनशील भाग को काटकर, सुखाकर गोलियों (pellets) में बदला जाता है और सीमेंट भट्ठों में जलाया जाता है। इस उत्पाद को कहते हैं:", "o": ["कचरा-व्युत्पन्न ईंधन (RDF)", "वर्मीकम्पोस्ट", "फ़्लाई ऐश", "निक्षालित द्रव"], "e": "RDF न पुनर्चक्रित होने वाले सूखे कचरे से ऊर्जा प्राप्त करने का तरीका है।"}}, {"a": 1, "en": {"q": "A discarded industrial acid that eats through steel drums shows which characteristic of hazardous waste?", "o": ["Ignitability", "Corrosivity", "Reactivity", "Toxicity"], "e": "Corrosive waste destroys metals and tissue. The four characteristics: ignitability, corrosivity, reactivity, toxicity."}, "hi": {"q": "स्टील के ड्रमों को गला देने वाला फेंका गया औद्योगिक अम्ल परिसंकटमय अपशिष्ट की किस विशेषता को दर्शाता है?", "o": ["ज्वलनशीलता (Ignitability)", "संक्षारकता (Corrosivity)", "अभिक्रियाशीलता (Reactivity)", "विषाक्तता (Toxicity)"], "e": "संक्षारक अपशिष्ट धातुओं और ऊतकों को नष्ट करता है। चार विशेषताएँ: ज्वलनशीलता, संक्षारकता, अभिक्रियाशीलता, विषाक्तता।"}}, {"a": 0, "en": {"q": "Old CRT monitors and the solder used on circuit boards make e-waste a major source of which toxic heavy metal?", "o": ["Lead", "Silicon", "Aluminium", "Magnesium"], "e": "CRT glass and solder contain lead; e-waste also has mercury and cadmium."}, "hi": {"q": "पुराने CRT मॉनिटर और सर्किट बोर्ड का सोल्डर ई-कचरे को किस विषैली भारी धातु का प्रमुख स्रोत बनाते हैं?", "o": ["सीसा (Lead)", "सिलिकॉन", "एल्युमिनियम", "मैग्नीशियम"], "e": "CRT काँच और सोल्डर में सीसा होता है; ई-कचरे में पारा और कैडमियम भी होते हैं।"}}, {"a": 3, "en": {"q": "Segregating wet and dry waste at the household level is important mainly because:", "o": ["It increases the total waste generated", "It lets all waste go to landfill", "It removes the need for collection", "It makes composting and recycling easier"], "e": "Clean, separated wet waste can be composted and dry waste recycled, so far less reaches the landfill – the core idea of the SWM Rules."}, "hi": {"q": "घरेलू स्तर पर गीले और सूखे कचरे को अलग करना मुख्यतः क्यों महत्वपूर्ण है?", "o": ["इससे कुल कचरा बढ़ता है", "इससे सारा कचरा लैंडफ़िल जा सकता है", "इससे संग्रहण की ज़रूरत नहीं रहती", "इससे कम्पोस्टिंग और पुनर्चक्रण आसान होता है"], "e": "साफ़ अलग किया गीला कचरा कम्पोस्ट और सूखा कचरा पुनर्चक्रित हो सकता है, जिससे लैंडफ़िल तक बहुत कम कचरा पहुँचता है – SWM नियमों का मूल विचार।"}}, {"a": 2, "en": {"q": "Under Extended Producer Responsibility (EPR), who is responsible for collecting back and managing products at the end of their life?", "o": ["Municipal body", "Consumer alone", "Producer or brand owner", "State pollution board"], "e": "EPR applies to plastic packaging, e-waste and batteries."}, "hi": {"q": "विस्तारित उत्पादक उत्तरदायित्व (EPR) के तहत उत्पादों को उनके जीवन के अंत में वापस इकट्ठा करने और प्रबंधित करने की ज़िम्मेदारी किसकी है?", "o": ["नगर निकाय", "केवल उपभोक्ता", "उत्पादक या ब्रांड मालिक", "राज्य प्रदूषण बोर्ड"], "e": "EPR प्लास्टिक पैकेजिंग, ई-कचरे और बैटरियों पर लागू है।"}}, {"a": 1, "en": {"q": "Identified single-use plastic items were banned across India from:", "o": ["2 October 2019", "1 July 2022", "31 December 2022", "1 April 2026"], "e": "Banned under the Plastic Waste Management (Amendment) Rules, 2021. 31 Dec 2022 is the carry-bag thickness date."}, "hi": {"q": "चिह्नित एकल-उपयोग प्लास्टिक (single-use plastic) वस्तुओं पर पूरे भारत में प्रतिबंध कब से लागू हुआ?", "o": ["2 अक्टूबर 2019", "1 जुलाई 2022", "31 दिसम्बर 2022", "1 अप्रैल 2026"], "e": "प्लास्टिक अपशिष्ट प्रबंधन (संशोधन) नियम, 2021 के तहत प्रतिबंधित। 31 दिसम्बर 2022 कैरी-बैग मोटाई की तिथि है।"}}, {"a": 2, "en": {"q": "From 31 December 2022, the minimum permitted thickness of a plastic carry bag in India is:", "o": ["50 micron", "75 micron", "120 micron", "150 micron"], "e": "75 micron from 30 Sept 2021, then 120 micron from 31 Dec 2022."}, "hi": {"q": "31 दिसम्बर 2022 से भारत में प्लास्टिक कैरी बैग की न्यूनतम अनुमत मोटाई है:", "o": ["50 माइक्रोन", "75 माइक्रोन", "120 माइक्रोन", "150 माइक्रोन"], "e": "30 सितम्बर 2021 से 75 माइक्रोन, फिर 31 दिसम्बर 2022 से 120 माइक्रोन।"}}, {"a": 3, "en": {"q": "Shredded waste plastic coated on hot stone aggregate and mixed with bitumen is mainly used for:", "o": ["Making compost", "Producing biogas", "Water purification", "Road construction"], "e": "Plastic roads use waste plastic; they bind better and last longer."}, "hi": {"q": "गर्म पत्थर की गिट्टी पर चढ़ाया गया और बिटुमेन में मिलाया गया कटा हुआ प्लास्टिक कचरा मुख्यतः किसमें उपयोग होता है?", "o": ["खाद बनाने में", "बायोगैस बनाने में", "जल शुद्धिकरण में", "सड़क निर्माण में"], "e": "प्लास्टिक सड़कें कचरा प्लास्टिक का उपयोग करती हैं; ये बेहतर जुड़ती हैं और अधिक टिकाऊ होती हैं।"}}, {"a": 1, "en": {"q": "Under the Solid Waste Management Rules, 2026, waste must be segregated at source into:", "o": ["Wet, dry, plastic, metal", "Wet, dry, sanitary, special-care", "Organic, glass, paper, e-waste", "Green, blue, red, yellow"], "e": "The 2026 rules (in force from 1 April 2026) replaced the 2016 rules with four-stream segregation."}, "hi": {"q": "ठोस अपशिष्ट प्रबंधन नियम, 2026 के तहत कचरे को स्रोत पर किन धाराओं में अलग करना अनिवार्य है?", "o": ["गीला, सूखा, प्लास्टिक, धातु", "गीला, सूखा, सैनिटरी, विशेष-देखभाल", "कार्बनिक, काँच, कागज़, ई-कचरा", "हरा, नीला, लाल, पीला"], "e": "2026 के नियमों (1 अप्रैल 2026 से लागू) ने 2016 के नियमों की जगह चार-धारा पृथक्करण लागू किया।"}}, {"a": 3, "en": {"q": "Under the SWM Rules 2026, used batteries, expired medicines, paint cans and CFL bulbs from households go into:", "o": ["Wet waste", "Dry waste", "Sanitary waste", "Special-care waste"], "e": "Special-care waste is household hazardous waste. Diapers and sanitary pads go to sanitary waste."}, "hi": {"q": "SWM नियम 2026 के तहत घरों की पुरानी बैटरियाँ, एक्सपायर्ड दवाएँ, पेंट के डिब्बे और CFL बल्ब किस धारा में जाते हैं?", "o": ["गीला कचरा", "सूखा कचरा", "सैनिटरी कचरा", "विशेष-देखभाल कचरा"], "e": "विशेष-देखभाल कचरा घरेलू परिसंकटमय अपशिष्ट है। डायपर और सैनिटरी पैड सैनिटरी कचरे में जाते हैं।"}}, {"a": 2, "en": {"q": "In a hospital, used needles and scalpel blades must be put into the:", "o": ["Yellow plastic bag", "Red plastic bag", "White translucent container", "Blue cardboard box"], "e": "Sharps go into a white, puncture-proof, translucent container (BMW Rules 2016)."}, "hi": {"q": "अस्पताल में प्रयुक्त सुइयाँ और सर्जिकल ब्लेड किसमें डाले जाने चाहिए?", "o": ["पीला प्लास्टिक बैग", "लाल प्लास्टिक बैग", "सफ़ेद पारभासी पात्र", "नीला कार्डबोर्ड बॉक्स"], "e": "नुकीली वस्तुएँ (sharps) सफ़ेद, पंचर-रोधी, पारभासी पात्र में जाती हैं (BMW नियम 2016)।"}}, {"a": 0, "en": {"q": "Contaminated recyclable items such as IV tubing, catheters and gloves (without needles) go into which bag?", "o": ["Red", "Yellow", "Blue", "Black"], "e": "The red bag goes for autoclaving, then shredding and recycling."}, "hi": {"q": "IV ट्यूबिंग, कैथेटर और दस्ताने (बिना सुई) जैसी दूषित पुनर्चक्रण-योग्य वस्तुएँ किस बैग में जाती हैं?", "o": ["लाल", "पीला", "नीला", "काला"], "e": "लाल बैग ऑटोक्लेव, फिर कटाई और पुनर्चक्रण के लिए जाता है।"}}, {"a": 2, "en": {"q": "Human anatomical waste and soiled dressings, collected in yellow bags, are treated mainly by:", "o": ["Autoclaving and recycling", "Shredding and landfilling", "Incineration", "Composting"], "e": "BMW Rules 2016 prescribe incineration (or plasma pyrolysis / deep burial) for yellow-category waste."}, "hi": {"q": "पीले बैग में एकत्र मानव शारीरिक अपशिष्ट और गंदी पट्टियों का उपचार मुख्यतः किससे होता है?", "o": ["ऑटोक्लेव और पुनर्चक्रण", "कटाई और भू-भराव", "भस्मीकरण (Incineration)", "कम्पोस्टिंग"], "e": "BMW नियम 2016 पीली श्रेणी के अपशिष्ट के लिए भस्मीकरण (या प्लाज़्मा पायरोलिसिस / गहरा गाड़ना) निर्धारित करते हैं।"}}, {"a": 1, "en": {"q": "Under the BMW Rules 2016, untreated biomedical waste should not be stored beyond:", "o": ["24 hours", "48 hours", "12 hours", "72 hours"], "e": "It must be treated and disposed of within 48 hours."}, "hi": {"q": "BMW नियम 2016 के तहत अनुपचारित जैव-चिकित्सा अपशिष्ट को अधिकतम कितने समय तक रखा जा सकता है?", "o": ["24 घंटे", "48 घंटे", "12 घंटे", "72 घंटे"], "e": "इसका उपचार और निपटान 48 घंटे के भीतर होना चाहिए।"}}, {"a": 1, "en": {"q": "High-level radioactive waste from nuclear reactors is finally managed by:", "o": ["Open dumping in deserts", "Vitrification and deep burial", "Mixing with municipal waste", "Burning in incinerators"], "e": "It is converted into glass (vitrified), kept in shielded containers and stored deep underground."}, "hi": {"q": "परमाणु रिएक्टरों के उच्च-स्तरीय रेडियोधर्मी अपशिष्ट का अंतिम प्रबंधन किस प्रकार होता है?", "o": ["मरुस्थल में खुले में डंपिंग", "काचीकरण और गहराई में दफ़नाना", "नगरीय कचरे में मिलाना", "भस्मकों में जलाना"], "e": "इसे काँच में बदला (vitrification) जाता है, परिरक्षित पात्रों में रखा जाता है और गहराई में भंडारित किया जाता है।"}}, {"a": 3, "en": {"q": "Concrete and brick debris from demolished buildings is best managed by:", "o": ["Dumping into low-lying lakes", "Open burning at the site", "Composting with kitchen waste", "Crushing into recycled aggregate"], "e": "Construction & demolition (C&D) waste is recycled into aggregates, bricks and paver blocks."}, "hi": {"q": "गिराई गई इमारतों के कंक्रीट और ईंट के मलबे का सबसे अच्छा प्रबंधन है:", "o": ["निचली झीलों में डंप करना", "स्थल पर खुले में जलाना", "रसोई कचरे के साथ कम्पोस्ट करना", "कुचलकर पुनर्चक्रित गिट्टी बनाना"], "e": "निर्माण एवं विध्वंस (C&D) अपशिष्ट से गिट्टी, ईंटें और पेवर ब्लॉक बनाए जाते हैं।"}}];
+
+const N = Q.length, TOTAL = Math.round(N*48), K = "abcd";
+let lang = "en", cur = 0, ans, visited, marked, left, tick, done = false;
+const $ = id => document.getElementById(id);
+const t = k => UI[lang][k];
+
+function setLang(l){
+  lang = l;
+  document.documentElement.lang = l;
+  document.body.classList.toggle("hi", l === "hi");
+  $("bEn").setAttribute("aria-pressed", l === "en");
+  $("bHi").setAttribute("aria-pressed", l === "hi");
+  document.querySelectorAll("[data-t]").forEach(el => { const v = t(el.dataset.t); if (typeof v === "string") el.textContent = v; });
+  $("rules").innerHTML = t("rules").map(r => `<li>${r}</li>`).join("");
+  $("legend").innerHTML = t("legend").map(([c,l]) => `<span><i style="background:${c}"></i>${l}</span>`).join("");
+  if ($("quiz").style.display === "grid") renderQ();
+  if (done) renderResult();
+}
+
+function reset(){
+  ans = Array(N).fill(null); visited = Array(N).fill(false); marked = Array(N).fill(false);
+  cur = 0; left = TOTAL; done = false;
+}
+
+function startTest(){
+  reset();
+  $("start").style.display = "none"; $("result").style.display = "none";
+  $("quiz").style.display = "grid"; $("timer").style.display = "block";
+  renderQ(); updTimer();
+  clearInterval(tick);
+  tick = setInterval(() => { left--; updTimer(); if (left <= 0) { finish(true); } }, 1000);
+  window.scrollTo(0,0);
+}
+
+function updTimer(){
+  const m = Math.floor(Math.max(left,0)/60), s = Math.max(left,0)%60;
+  $("timer").textContent = `${String(m).padStart(2,"0")}:${String(s).padStart(2,"0")}`;
+  $("timer").classList.toggle("low", left <= 120);
+}
+
+function renderQ(){
+  visited[cur] = true;
+  const q = Q[cur][lang];
+  $("qno").textContent = `${t("q")} ${cur+1} ${t("of")} ${N}`;
+  $("qtext").textContent = q.q;
+  $("opts").innerHTML = q.o.map((o,i) =>
+    `<button class="opt" role="radio" aria-checked="${ans[cur]===i}" data-i="${i}"><span class="k">${K[i]}</span><span>${o}</span></button>`).join("");
+  $("opts").querySelectorAll(".opt").forEach(b => b.onclick = () => { ans[cur] = +b.dataset.i; renderQ(); });
+  $("prevBtn").disabled = cur === 0;
+  renderPal();
+}
+
+function renderPal(){
+  $("pal").innerHTML = Q.map((_,i) => {
+    let c = "";
+    if (marked[i]) c = ans[i] !== null ? "mka" : "mk";
+    else if (ans[i] !== null) c = "ans";
+    else if (visited[i]) c = "na";
+    return `<button class="${c}${i===cur?" cur":""}" data-i="${i}" aria-label="${t("q")} ${i+1}">${i+1}</button>`;
+  }).join("");
+  $("pal").querySelectorAll("button").forEach(b => b.onclick = () => { cur = +b.dataset.i; renderQ(); });
+  const a = ans.filter(x => x !== null).length, mk = marked.filter(Boolean).length;
+  const nv = visited.filter(v => !v).length, na = visited.filter((v,i) => v && ans[i] === null).length;
+  $("counts").innerHTML = [[t("cAns"),a],[t("cNa"),na],[t("cMk"),mk],[t("cNv"),nv]].map(([l,v]) => `<div><span>${l}</span><b>${v}</b></div>`).join("");
+}
+
+function go(d){ if (cur + d >= 0 && cur + d < N) { cur += d; renderQ(); window.scrollTo({top:0}); } }
+
+function askSubmit(){
+  const a = ans.filter(x => x !== null).length;
+  $("mBody").textContent = UI[lang].mBody(a, N - a);
+  $("modal").style.display = "grid"; $("mYes").focus();
+}
+
+function finish(auto){
+  clearInterval(tick); done = true;
+  $("modal").style.display = "none";
+  $("quiz").style.display = "none"; $("timer").style.display = "none";
+  $("result").style.display = "block";
+  renderResult();
+  if (auto) alert(t("timeUp"));
+  window.scrollTo(0,0);
+}
+
+function renderResult(){
+  let c = 0, w = 0;
+  Q.forEach((q,i) => { if (ans[i] === null) return; ans[i] === q.a ? c++ : w++; });
+  const s = N - c - w, score = Math.round((c - w/3) * 100) / 100;
+  const acc = c + w ? Math.round(c / (c + w) * 100) : 0;
+  $("scoreVal").textContent = score;
+  const pct = Math.max(0, score) / N * 100;
+  $("ring").style.background = `conic-gradient(var(--leaf) ${pct}%, var(--chip) 0)`;
+  $("stats").innerHTML = [[t("sC"),c,"var(--leaf)"],[t("sW"),w,"var(--red)"],[t("sS"),s,"var(--amber)"],[t("sA"),acc+"%","var(--ink)"]]
+    .map(([l,v,col]) => `<div class="stat"><strong style="color:${col}">${v}</strong><span>${l}</span></div>`).join("");
+  const v = t("verdicts"); $("verdict").textContent = score < 10 ? v[0] : score < 16 ? v[1] : score < 21 ? v[2] : v[3];
+  $("review").innerHTML = Q.map((q,i) => {
+    const d = q[lang], u = ans[i], st = u === null ? "s" : u === q.a ? "c" : "w";
+    const tag = st === "c" ? t("tC") : st === "w" ? t("tW") : t("tS");
+    const opts = d.o.map((o,j) => `<li class="${j===q.a?"right":(j===u?"wrong":"")}">(${K[j]}) ${o}</li>`).join("");
+    return `<div class="rv ${st}"><span class="tag">${t("q")} ${i+1} · ${tag}</span><p>${d.q}</p><ul>${opts}</ul><div class="exp"><b>${t("ans")}: (${K[q.a]})</b> – ${d.e}</div></div>`;
+  }).join("");
+}
+
+$("bEn").onclick = () => setLang("en");
+$("bHi").onclick = () => setLang("hi");
+$("startBtn").onclick = startTest;
+$("retryBtn").onclick = startTest;
+$("prevBtn").onclick = () => go(-1);
+$("nextBtn").onclick = () => { if (cur === N-1) renderQ(); else go(1); };
+$("clearBtn").onclick = () => { ans[cur] = null; renderQ(); };
+$("markBtn").onclick = () => { marked[cur] = !marked[cur]; if (cur < N-1) go(1); else renderQ(); };
+$("submitBtn").onclick = askSubmit;
+$("mNo").onclick = () => { $("modal").style.display = "none"; };
+$("mYes").onclick = () => finish(false);
+document.addEventListener("keydown", e => {
+  if ($("modal").style.display === "grid" && e.key === "Escape") $("modal").style.display = "none";
+  if ($("quiz").style.display !== "grid" || $("modal").style.display === "grid") return;
+  if (["1","2","3","4"].includes(e.key)) { ans[cur] = +e.key - 1; renderQ(); }
+  if (e.key === "ArrowRight") go(1);
+  if (e.key === "ArrowLeft") go(-1);
+});
+reset(); setLang("en");
+</script>
+</body>
+</html>
