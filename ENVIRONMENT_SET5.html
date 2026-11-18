@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Environment Set 5 – RRB JE CBT-2 | THE EXAM ENGINEER</title>
+<meta name="description" content="RRB JE CBT-2 Environment Set 5 – Global Warming & Climate Change. 25 bilingual PYQ-based questions with 1/3 negative marking. THE EXAM ENGINEER.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Noto+Sans+Devanagari:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --forest:#0f4a2d; --forest-2:#0b3320; --leaf:#16a34a; --leaf-soft:#e7f6ec;
+  --amber:#f59e0b; --red:#dc2626; --red-soft:#fdecec; --violet:#7c3aed;
+  --bg:#f3f6f2; --card:#ffffff; --ink:#17251d; --muted:#5b6b62; --line:#d8e2db; --chip:#e9eeea;
+  --head-ink:#ffffff;
+}
+@media (prefers-color-scheme: dark){
+  :root{
+    color-scheme: dark;
+    --forest:#0f3d26; --forest-2:#0a2a1a; --leaf:#34c26a; --leaf-soft:#123222;
+    --amber:#fbbf24; --red:#f87171; --red-soft:#3a1717; --violet:#a78bfa;
+    --bg:#0e1511; --card:#16211b; --ink:#e6efe9; --muted:#9db0a5; --line:#2a3a31; --chip:#223029;
+    --head-ink:#ffffff;
+  }
+}
+*{box-sizing:border-box}
+html,body{margin:0}
+body{font-family:"Poppins","Noto Sans Devanagari",system-ui,sans-serif;background:var(--bg);color:var(--ink);line-height:1.55;-webkit-text-size-adjust:100%}
+body.hi{font-family:"Noto Sans Devanagari","Poppins",system-ui,sans-serif}
+button{font:inherit;cursor:pointer}
+button:focus-visible,a:focus-visible{outline:3px solid var(--amber);outline-offset:2px}
+a{color:inherit}
+
+/* header */
+header{background:linear-gradient(160deg,var(--forest),var(--forest-2));color:var(--head-ink);padding:12px 16px}
+.hwrap{max-width:1040px;margin:0 auto;display:flex;align-items:center;gap:12px;flex-wrap:wrap}
+.logo{width:40px;height:40px;border-radius:50%;background:#22c55e;color:#0b3320;display:grid;place-items:center;font-weight:700;flex:none}
+.brand{flex:1;min-width:180px}
+.brand b{display:block;font-size:16px;letter-spacing:.3px}
+.brand a{font-size:12px;opacity:.85;text-decoration:none}
+.lang{display:flex;background:rgba(255,255,255,.12);border-radius:999px;padding:3px}
+.lang button{border:0;background:transparent;color:#fff;padding:6px 14px;border-radius:999px;font-size:13px;font-weight:600}
+.lang button[aria-pressed="true"]{background:#fff;color:var(--forest)}
+.timer{font-variant-numeric:tabular-nums;font-weight:700;background:rgba(255,255,255,.12);padding:6px 12px;border-radius:8px;font-size:15px;display:none}
+.timer.low{background:var(--red);color:#fff}
+
+main{max-width:1040px;margin:0 auto;padding:18px 14px 40px}
+.panel{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:20px}
+
+/* start screen */
+.start h1{font-size:clamp(22px,4.6vw,32px);line-height:1.25;margin:4px 0 6px;color:var(--ink)}
+.start .sub{color:var(--muted);margin:0 0 16px}
+.facts{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin:14px 0 18px}
+.fact{border:1px solid var(--line);border-radius:10px;padding:10px;text-align:center}
+.fact strong{display:block;font-size:22px;color:var(--leaf)}
+.fact span{font-size:12.5px;color:var(--muted)}
+.rules{margin:0 0 18px;padding-left:20px}
+.rules li{margin:4px 0}
+.legend{display:flex;flex-wrap:wrap;gap:12px;font-size:13px;color:var(--muted);margin-bottom:18px}
+.legend i{display:inline-block;width:14px;height:14px;border-radius:4px;vertical-align:-2px;margin-right:5px}
+.btn{border:0;border-radius:10px;padding:11px 18px;font-weight:600;font-size:15px}
+.btn-main{background:var(--leaf);color:#fff}
+.btn-ghost{background:var(--chip);color:var(--ink)}
+.btn-warn{background:var(--violet);color:#fff}
+.btn-red{background:var(--red);color:#fff}
+.copy{font-size:12px;color:var(--muted);margin-top:16px}
+
+/* quiz */
+.quiz{display:none;grid-template-columns:1fr 270px;gap:16px;align-items:start}
+.qhead{display:flex;justify-content:space-between;align-items:center;margin-bottom:10px;color:var(--muted);font-size:14px}
+.qhead b{color:var(--ink)}
+.marks{font-size:12.5px}
+.qtext{font-size:17px;font-weight:500;margin:0 0 16px}
+body.hi .qtext{font-size:18px}
+.opts{display:grid;gap:10px}
+.opt{display:flex;gap:12px;align-items:flex-start;text-align:left;width:100%;background:transparent;border:1.5px solid var(--line);border-radius:10px;padding:12px 14px;color:var(--ink)}
+.opt .k{flex:none;width:28px;height:28px;border-radius:50%;border:1.5px solid var(--line);display:grid;place-items:center;font-weight:600;font-size:13px}
+.opt[aria-checked="true"]{border-color:var(--leaf);background:var(--leaf-soft)}
+.opt[aria-checked="true"] .k{background:var(--leaf);border-color:var(--leaf);color:#fff}
+.actions{display:flex;flex-wrap:wrap;gap:8px;margin-top:18px}
+.actions .sp{flex:1}
+.side h3{margin:0 0 10px;font-size:15px}
+.pal{display:grid;grid-template-columns:repeat(5,1fr);gap:7px}
+.pal button{border:0;border-radius:8px;height:38px;font-weight:600;background:var(--chip);color:var(--ink)}
+.pal button.ans{background:var(--leaf);color:#fff}
+.pal button.na{background:var(--red);color:#fff}
+.pal button.mk{background:var(--violet);color:#fff}
+.pal button.mka{background:var(--violet);color:#fff;box-shadow:inset 0 -5px 0 var(--leaf)}
+.pal button.cur{outline:3px solid var(--amber);outline-offset:1px}
+.counts{font-size:13px;color:var(--muted);margin:12px 0}
+.counts div{display:flex;justify-content:space-between}
+
+/* result */
+.result{display:none}
+.score{display:flex;flex-wrap:wrap;gap:18px;align-items:center;margin-bottom:16px}
+.ring{width:130px;height:130px;border-radius:50%;display:grid;place-items:center;flex:none}
+.ring div{width:104px;height:104px;border-radius:50%;background:var(--card);display:grid;place-items:center;text-align:center}
+.ring strong{font-size:26px;line-height:1}
+.ring span{font-size:12px;color:var(--muted)}
+.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;flex:1;min-width:260px}
+.stat{border:1px solid var(--line);border-radius:10px;padding:10px;text-align:center}
+.stat strong{display:block;font-size:20px}
+.stat span{font-size:12.5px;color:var(--muted)}
+.verdict{margin:0 0 16px;font-weight:500}
+.review{margin-top:18px;display:grid;gap:12px}
+.rv{border:1px solid var(--line);border-left:5px solid var(--line);border-radius:10px;padding:12px 14px}
+.rv.c{border-left-color:var(--leaf)} .rv.w{border-left-color:var(--red)} .rv.s{border-left-color:var(--amber)}
+.rv .tag{font-size:12px;font-weight:600}
+.rv.c .tag{color:var(--leaf)} .rv.w .tag{color:var(--red)} .rv.s .tag{color:var(--amber)}
+.rv p{margin:6px 0}
+.rv ul{list-style:none;padding:0;margin:6px 0;display:grid;gap:4px}
+.rv li{padding:5px 9px;border-radius:7px;font-size:14.5px}
+.rv li.right{background:var(--leaf-soft);color:var(--leaf);font-weight:600}
+.rv li.wrong{background:var(--red-soft);color:var(--red);text-decoration:line-through}
+.exp{font-size:14px;color:var(--muted);background:var(--chip);border-radius:8px;padding:8px 10px}
+.join{display:flex;flex-wrap:wrap;gap:10px;align-items:center;justify-content:space-between;background:var(--leaf-soft);border:1px solid var(--line);border-radius:12px;padding:12px 14px;margin-top:16px}
+.join a.btn{text-decoration:none}
+footer{text-align:center;font-size:12.5px;color:var(--muted);padding:0 14px 30px}
+footer a{color:var(--leaf);font-weight:600;text-decoration:none}
+
+/* modal */
+.modal{position:fixed;inset:0;background:rgba(0,0,0,.5);display:none;place-items:center;padding:16px;z-index:10}
+.modal .box{background:var(--card);color:var(--ink);border-radius:14px;max-width:420px;width:100%;padding:20px}
+.modal h3{margin:0 0 8px}
+.modal .row{display:flex;gap:8px;justify-content:flex-end;margin-top:16px}
+
+@media (max-width:820px){
+  .quiz{grid-template-columns:1fr}
+  .facts{grid-template-columns:repeat(2,1fr)}
+  .stats{grid-template-columns:repeat(2,1fr)}
+}
+@media (prefers-reduced-motion:no-preference){
+  .opt,.pal button{transition:background .15s,border-color .15s}
+}
+</style>
+</head>
+<body>
+<header>
+  <div class="hwrap">
+    <div class="logo">TE</div>
+    <div class="brand"><b>THE EXAM ENGINEER</b><a href="https://t.me/the_exam_engineer" target="_blank" rel="noopener">t.me/the_exam_engineer</a></div>
+    <div class="timer" id="timer" aria-live="off">20:00</div>
+    <div class="lang" role="group" aria-label="Language">
+      <button id="bEn" aria-pressed="true">English</button>
+      <button id="bHi" aria-pressed="false">हिंदी</button>
+    </div>
+  </div>
+</header>
+
+<main>
+  <!-- START -->
+  <section class="panel start" id="start">
+    <div class="sub" data-t="kicker"></div>
+    <h1 data-t="title"></h1>
+    <p class="sub" data-t="subtitle"></p>
+    <div class="facts">
+      <div class="fact"><strong id="nQ">25</strong><span data-t="fQ"></span></div>
+      <div class="fact"><strong id="nT">20</strong><span data-t="fT"></span></div>
+      <div class="fact"><strong>+1</strong><span data-t="fR"></span></div>
+      <div class="fact"><strong>−⅓</strong><span data-t="fW"></span></div>
+    </div>
+    <ul class="rules" id="rules"></ul>
+    <div class="legend" id="legend"></div>
+    <button class="btn btn-main" id="startBtn" data-t="start"></button>
+    <p class="copy" data-t="copy"></p>
+  </section>
+
+  <!-- QUIZ -->
+  <section class="quiz" id="quiz">
+    <div class="panel">
+      <div class="qhead"><span><b id="qno"></b></span><span class="marks" data-t="marks"></span></div>
+      <p class="qtext" id="qtext"></p>
+      <div class="opts" id="opts" role="radiogroup"></div>
+      <div class="actions">
+        <button class="btn btn-ghost" id="prevBtn" data-t="prev"></button>
+        <button class="btn btn-ghost" id="clearBtn" data-t="clear"></button>
+        <span class="sp"></span>
+        <button class="btn btn-warn" id="markBtn" data-t="mark"></button>
+        <button class="btn btn-main" id="nextBtn" data-t="next"></button>
+      </div>
+    </div>
+    <aside class="panel side">
+      <h3 data-t="palette"></h3>
+      <div class="pal" id="pal"></div>
+      <div class="counts" id="counts"></div>
+      <button class="btn btn-red" style="width:100%" id="submitBtn" data-t="submit"></button>
+    </aside>
+  </section>
+
+  <!-- RESULT -->
+  <section class="panel result" id="result">
+    <h2 data-t="resTitle" style="margin-top:0"></h2>
+    <div class="score">
+      <div class="ring" id="ring"><div><strong id="scoreVal"></strong><span data-t="outOf"></span></div></div>
+      <div class="stats" id="stats"></div>
+    </div>
+    <p class="verdict" id="verdict"></p>
+    <div style="display:flex;gap:8px;flex-wrap:wrap">
+      <button class="btn btn-main" id="retryBtn" data-t="retry"></button>
+    </div>
+    <div class="join">
+      <span data-t="joinTxt"></span>
+      <a class="btn btn-main" href="https://t.me/the_exam_engineer" target="_blank" rel="noopener" data-t="joinBtn"></a>
+    </div>
+    <h3 data-t="revTitle" style="margin:22px 0 0"></h3>
+    <div class="review" id="review"></div>
+  </section>
+</main>
+
+<footer>© 2026 THE EXAM ENGINEER · <span data-t="foot"></span> · <a href="https://t.me/the_exam_engineer" target="_blank" rel="noopener">t.me/the_exam_engineer</a></footer>
+
+<div class="modal" id="modal" role="dialog" aria-modal="true" aria-labelledby="mTitle">
+  <div class="box">
+    <h3 id="mTitle" data-t="mTitle"></h3>
+    <div id="mBody"></div>
+    <div class="row">
+      <button class="btn btn-ghost" id="mNo" data-t="mNo"></button>
+      <button class="btn btn-red" id="mYes" data-t="mYes"></button>
+    </div>
+  </div>
+</div>
+
+<script>
+const UI = {
+ en:{kicker:"RRB JE CBT-2 (2026) · Basics of Environment & Pollution Control",
+  title:"Environment Set 5 – Global Warming & Climate Change",
+  subtitle:"Conceptual, RRB JE PYQ based questions from Chapter 7 (Global Warming & Climate Change) and the climate COPs of the Environment One Stop Solution.",
+  fQ:"Questions",fT:"Minutes",fR:"Per correct answer",fW:"Per wrong answer",
+  rules:["Timer follows the CBT-2 pace: 150 questions in 120 minutes = 48 seconds per question.","Each correct answer gives +1 mark; each wrong answer deducts 1/3 mark. Unattempted questions get 0.","You can switch between English and Hindi at any time.","The test is submitted automatically when the time is over."],
+  legend:[["var(--chip)","Not visited"],["var(--red)","Not answered"],["var(--leaf)","Answered"],["var(--violet)","Marked for review"]],
+  start:"Start test",copy:"© 2026 THE EXAM ENGINEER. Free for practice. Do not copy or re-brand.",
+  marks:"+1 / −⅓",prev:"Previous",clear:"Clear response",mark:"Mark & next",next:"Save & next",palette:"Question palette",submit:"Submit test",
+  q:"Question",of:"of",cAns:"Answered",cNa:"Not answered",cMk:"Marked",cNv:"Not visited",
+  mTitle:"Submit the test?",mNo:"Go back",mYes:"Submit",
+  mBody:(a,u)=>`You have answered ${a} of 25 questions. ${u} are unanswered.`,
+  resTitle:"Your result",outOf:"out of 25",
+  sC:"Correct",sW:"Wrong",sS:"Skipped",sA:"Accuracy",
+  verdicts:["Revise Chapter 7 of the notes and try again.","Good start. Read the explanations for the questions you missed.","Strong score. Keep this accuracy in the exam.","Excellent. You are ready for these 10 marks."],
+  retry:"Retake test",joinTxt:"Sets 1 to 4 and the full Environment notes are available on the channel.",joinBtn:"Join THE EXAM ENGINEER",
+  revTitle:"Answers with explanation",tC:"Correct",tW:"Wrong",tS:"Not attempted",yours:"Your answer",ans:"Answer",
+  foot:"RRB JE CBT-2 Environment Set 5",timeUp:"Time is over. Your test has been submitted."},
+ hi:{kicker:"RRB JE CBT-2 (2026) · पर्यावरण की मूल बातें एवं प्रदूषण नियंत्रण",
+  title:"पर्यावरण सेट 5 – ग्लोबल वार्मिंग एवं जलवायु परिवर्तन",
+  subtitle:"पर्यावरण वन स्टॉप सॉल्यूशन के अध्याय 7 (ग्लोबल वार्मिंग एवं जलवायु परिवर्तन) और जलवायु COPs से अवधारणात्मक, RRB JE PYQ आधारित प्रश्न।",
+  fQ:"प्रश्न",fT:"मिनट",fR:"प्रति सही उत्तर",fW:"प्रति गलत उत्तर",
+  rules:["टाइमर CBT-2 की गति पर है: 120 मिनट में 150 प्रश्न = प्रति प्रश्न 48 सेकंड।","हर सही उत्तर पर +1 अंक; हर गलत उत्तर पर 1/3 अंक कटेगा। छोड़े गए प्रश्न पर 0।","आप कभी भी English और हिंदी के बीच बदल सकते हैं।","समय समाप्त होते ही टेस्ट अपने-आप सबमिट हो जाएगा।"],
+  legend:[["var(--chip)","नहीं देखा"],["var(--red)","उत्तर नहीं दिया"],["var(--leaf)","उत्तर दिया"],["var(--violet)","रिव्यू हेतु चिह्नित"]],
+  start:"टेस्ट शुरू करें",copy:"© 2026 THE EXAM ENGINEER. अभ्यास हेतु निःशुल्क। कॉपी या री-ब्रांड न करें।",
+  marks:"+1 / −⅓",prev:"पिछला",clear:"उत्तर हटाएँ",mark:"चिह्नित करें व आगे",next:"सेव करें व आगे",palette:"प्रश्न पैलेट",submit:"टेस्ट सबमिट करें",
+  q:"प्रश्न",of:"/",cAns:"उत्तर दिया",cNa:"उत्तर नहीं दिया",cMk:"चिह्नित",cNv:"नहीं देखा",
+  mTitle:"टेस्ट सबमिट करें?",mNo:"वापस जाएँ",mYes:"सबमिट करें",
+  mBody:(a,u)=>`आपने 25 में से ${a} प्रश्नों के उत्तर दिए हैं। ${u} प्रश्न बिना उत्तर के हैं।`,
+  resTitle:"आपका परिणाम",outOf:"25 में से",
+  sC:"सही",sW:"गलत",sS:"छोड़े",sA:"सटीकता",
+  verdicts:["नोट्स का अध्याय 7 दोहराएँ और फिर से प्रयास करें।","अच्छी शुरुआत। जो प्रश्न छूटे उनकी व्याख्या पढ़ें।","बढ़िया स्कोर। परीक्षा में यही सटीकता बनाए रखें।","शानदार। आप इन 10 अंकों के लिए तैयार हैं।"],
+  retry:"टेस्ट दोबारा दें",joinTxt:"सेट 1 से 4 और पूरे पर्यावरण नोट्स चैनल पर उपलब्ध हैं।",joinBtn:"THE EXAM ENGINEER से जुड़ें",
+  revTitle:"व्याख्या सहित उत्तर",tC:"सही",tW:"गलत",tS:"प्रयास नहीं किया",yours:"आपका उत्तर",ans:"उत्तर",
+  foot:"RRB JE CBT-2 पर्यावरण सेट 5",timeUp:"समय समाप्त। आपका टेस्ट सबमिट हो गया है।"}
+};
+
+const Q = [{"a": 0, "en": {"q": "Without the natural greenhouse effect, the average surface temperature of the Earth would be about:", "o": ["−18 °C", "+15 °C", "0 °C", "+33 °C"], "e": "The actual average is about +15 °C, so the natural greenhouse effect keeps Earth about 33 °C warmer. +15 and +33 are traps."}, "hi": {"q": "प्राकृतिक ग्रीनहाउस प्रभाव के बिना पृथ्वी की सतह का औसत तापमान लगभग होता:", "o": ["−18 °C", "+15 °C", "0 °C", "+33 °C"], "e": "वास्तविक औसत लगभग +15 °C है, यानी प्राकृतिक ग्रीनहाउस प्रभाव पृथ्वी को लगभग 33 °C गर्म रखता है। +15 और +33 ट्रैप हैं।"}}, {"a": 2, "en": {"q": "Greenhouse gases warm the Earth's surface mainly because they:", "o": ["Block incoming sunlight completely", "Reflect all heat back to space", "Absorb outgoing infrared radiation", "Produce heat by chemical reactions"], "e": "Short-wave sunlight passes through, but the long-wave infrared emitted by the Earth is absorbed and re-radiated back."}, "hi": {"q": "ग्रीनहाउस गैसें पृथ्वी की सतह को मुख्यतः क्यों गर्म करती हैं?", "o": ["आने वाले सूर्यप्रकाश को पूरी तरह रोकती हैं", "सारी ऊष्मा अंतरिक्ष में परावर्तित करती हैं", "बाहर जाते अवरक्त विकिरण को अवशोषित करती हैं", "रासायनिक अभिक्रियाओं से ऊष्मा बनाती हैं"], "e": "लघु-तरंग सूर्यप्रकाश अंदर आ जाता है, पर पृथ्वी से निकला दीर्घ-तरंग अवरक्त विकिरण अवशोषित होकर वापस विकिरित होता है।"}}, {"a": 2, "en": {"q": "The most abundant greenhouse gas in the atmosphere, whose amount is controlled mainly by temperature, is:", "o": ["Carbon dioxide", "Methane", "Water vapour", "Nitrous oxide"], "e": "Water vapour is the most abundant natural GHG; CO₂ is the largest contributor from human activity."}, "hi": {"q": "वायुमंडल में सबसे प्रचुर ग्रीनहाउस गैस, जिसकी मात्रा मुख्यतः तापमान से नियंत्रित होती है:", "o": ["कार्बन डाइऑक्साइड", "मीथेन", "जल वाष्प", "नाइट्रस ऑक्साइड"], "e": "जल वाष्प सबसे प्रचुर प्राकृतिक GHG है; मानवीय गतिविधियों से सबसे बड़ा योगदान CO₂ का है।"}}, {"a": 3, "en": {"q": "Flooded paddy fields, cattle and landfills are major sources of which greenhouse gas?", "o": ["Carbon dioxide", "Sulphur hexafluoride", "Ozone", "Methane"], "e": "Anaerobic decomposition and cattle digestion (enteric fermentation) release methane."}, "hi": {"q": "जलमग्न धान के खेत, मवेशी और लैंडफ़िल किस ग्रीनहाउस गैस के प्रमुख स्रोत हैं?", "o": ["कार्बन डाइऑक्साइड", "सल्फ़र हेक्साफ़्लोराइड", "ओज़ोन", "मीथेन"], "e": "अवायवीय अपघटन और मवेशियों का पाचन (आंत्रिक किण्वन) मीथेन छोड़ते हैं।"}}, {"a": 1, "en": {"q": "Excessive use of nitrogenous fertilisers in agriculture mainly releases which greenhouse gas?", "o": ["Methane", "Nitrous oxide", "Sulphur hexafluoride", "Carbon monoxide"], "e": "Soil microbes convert excess nitrogen into N₂O (GWP about 273)."}, "hi": {"q": "कृषि में नाइट्रोजनी उर्वरकों का अत्यधिक उपयोग मुख्यतः कौन-सी ग्रीनहाउस गैस छोड़ता है?", "o": ["मीथेन", "नाइट्रस ऑक्साइड", "सल्फ़र हेक्साफ़्लोराइड", "कार्बन मोनोऑक्साइड"], "e": "मृदा सूक्ष्मजीव अतिरिक्त नाइट्रोजन को N₂O में बदलते हैं (GWP लगभग 273)।"}}, {"a": 3, "en": {"q": "A gas used as an insulator in high-voltage electrical switchgear has the highest Global Warming Potential among the Kyoto gases. The gas is:", "o": ["Carbon dioxide", "Methane", "Nitrous oxide", "Sulphur hexafluoride"], "e": "SF₆ has a GWP of about 25,200 (IPCC AR6)."}, "hi": {"q": "उच्च-वोल्टेज विद्युत स्विचगियर में कुचालक के रूप में प्रयुक्त एक गैस का ग्लोबल वार्मिंग पोटेंशियल (GWP) क्योटो गैसों में सबसे अधिक है। वह गैस है:", "o": ["कार्बन डाइऑक्साइड", "मीथेन", "नाइट्रस ऑक्साइड", "सल्फ़र हेक्साफ़्लोराइड"], "e": "SF₆ का GWP लगभग 25,200 है (IPCC AR6)।"}}, {"a": 2, "en": {"q": "The Global Warming Potential (GWP) of a gas compares its heat-trapping ability with that of the same mass of:", "o": ["Oxygen", "Water vapour", "Carbon dioxide", "Methane"], "e": "CO₂ is the reference (GWP = 1), usually over 100 years."}, "hi": {"q": "किसी गैस का ग्लोबल वार्मिंग पोटेंशियल (GWP) उसकी ऊष्मा रोकने की क्षमता की तुलना किसके समान द्रव्यमान से करता है?", "o": ["ऑक्सीजन", "जल वाष्प", "कार्बन डाइऑक्साइड", "मीथेन"], "e": "CO₂ संदर्भ है (GWP = 1), सामान्यतः 100 वर्षों के लिए।"}}, {"a": 0, "en": {"q": "Which pair of atmospheric gases does NOT contribute to the greenhouse effect?", "o": ["N₂ and O₂", "CO₂ and CH₄", "N₂O and O₃", "H₂O and CFCs"], "e": "Nitrogen and oxygen (about 99% of dry air) do not absorb infrared radiation."}, "hi": {"q": "वायुमंडलीय गैसों का कौन-सा युग्म ग्रीनहाउस प्रभाव में योगदान नहीं देता?", "o": ["N₂ और O₂", "CO₂ और CH₄", "N₂O और O₃", "H₂O और CFCs"], "e": "नाइट्रोजन और ऑक्सीजन (शुष्क वायु का लगभग 99%) अवरक्त विकिरण अवशोषित नहीं करतीं।"}}, {"a": 0, "en": {"q": "Rising CO₂ levels harm corals and shell-forming marine organisms mainly because:", "o": ["Oceans absorb CO₂ and become acidic", "Sea water becomes much saltier", "Ocean temperature drops sharply", "Dissolved oxygen rises in the sea"], "e": "Ocean acidification – CO₂ forms carbonic acid, pH falls and calcium carbonate shells weaken."}, "hi": {"q": "बढ़ता CO₂ स्तर प्रवाल (corals) और खोल बनाने वाले समुद्री जीवों को मुख्यतः क्यों हानि पहुँचाता है?", "o": ["महासागर CO₂ सोखकर अम्लीय हो जाते हैं", "समुद्री जल बहुत अधिक खारा हो जाता है", "महासागर का तापमान तेज़ी से गिरता है", "समुद्र में घुलित ऑक्सीजन बढ़ जाती है"], "e": "महासागरीय अम्लीकरण – CO₂ से कार्बोनिक अम्ल बनता है, pH घटता है और कैल्शियम कार्बोनेट के खोल कमज़ोर होते हैं।"}}, {"a": 2, "en": {"q": "The largest natural carbon sink on Earth is:", "o": ["Forests", "Grasslands", "Oceans", "Wetlands"], "e": "Oceans absorb about a quarter of human CO₂ emissions; forests are the largest sink on land."}, "hi": {"q": "पृथ्वी का सबसे बड़ा प्राकृतिक कार्बन सिंक है:", "o": ["वन", "घास के मैदान", "महासागर", "आर्द्रभूमि"], "e": "महासागर मानवीय CO₂ उत्सर्जन का लगभग एक-चौथाई सोखते हैं; स्थल पर वन सबसे बड़ा सिंक हैं।"}}, {"a": 1, "en": {"q": "One carbon credit represents:", "o": ["1 kg of CO₂ reduced", "1 tonne of CO₂e reduced", "One tree planted", "1 kWh of solar power"], "e": "One credit = 1 tonne of CO₂-equivalent avoided or removed."}, "hi": {"q": "एक कार्बन क्रेडिट दर्शाता है:", "o": ["1 kg CO₂ की कमी", "1 टन CO₂e की कमी", "एक पेड़ लगाना", "1 kWh सौर ऊर्जा"], "e": "एक क्रेडिट = 1 टन CO₂-समतुल्य उत्सर्जन से बचाव या निष्कासन।"}}, {"a": 3, "en": {"q": "The Kyoto Protocol (1997) placed legally binding emission-reduction targets mainly on:", "o": ["All developing countries", "Only small island nations", "Only oil-exporting countries", "Developed (Annex I) countries"], "e": "Adopted at COP-3 (1997), in force 2005. Developing countries such as India had no binding targets."}, "hi": {"q": "क्योटो प्रोटोकॉल (1997) ने कानूनी रूप से बाध्यकारी उत्सर्जन-कटौती लक्ष्य मुख्यतः किन पर लगाए?", "o": ["सभी विकासशील देश", "केवल छोटे द्वीपीय देश", "केवल तेल-निर्यातक देश", "विकसित (Annex I) देश"], "e": "COP-3 (1997) में अपनाया, 2005 में लागू। भारत जैसे विकासशील देशों पर बाध्यकारी लक्ष्य नहीं थे।"}}, {"a": 3, "en": {"q": "Which of the following is NOT among the six greenhouse gases covered by the Kyoto Protocol?", "o": ["Methane", "Nitrous oxide", "Sulphur hexafluoride", "Chlorofluorocarbons"], "e": "Kyoto covers CO₂, CH₄, N₂O, HFCs, PFCs and SF₆. CFCs come under the Montreal Protocol."}, "hi": {"q": "निम्न में से कौन क्योटो प्रोटोकॉल की छह ग्रीनहाउस गैसों में शामिल नहीं है?", "o": ["मीथेन", "नाइट्रस ऑक्साइड", "सल्फ़र हेक्साफ़्लोराइड", "क्लोरोफ़्लोरोकार्बन"], "e": "क्योटो में CO₂, CH₄, N₂O, HFCs, PFCs और SF₆ हैं। CFCs मॉन्ट्रियल प्रोटोकॉल के अंतर्गत आते हैं।"}}, {"a": 0, "en": {"q": "A wind-energy project in India earns credits under Kyoto's Clean Development Mechanism (CDM) and sells them to a developed country. These credits are called:", "o": ["CERs", "NDCs", "SDGs", "GWPs"], "e": "Certified Emission Reductions; 1 CER = 1 tonne CO₂e."}, "hi": {"q": "भारत की एक पवन-ऊर्जा परियोजना क्योटो के स्वच्छ विकास तंत्र (CDM) के तहत क्रेडिट अर्जित कर किसी विकसित देश को बेचती है। इन क्रेडिट को कहते हैं:", "o": ["CERs", "NDCs", "SDGs", "GWPs"], "e": "प्रमाणित उत्सर्जन कटौती (Certified Emission Reductions); 1 CER = 1 टन CO₂e।"}}, {"a": 1, "en": {"q": "The long-term temperature goal of the Paris Agreement (2015) is to keep global warming:", "o": ["Below 4 °C, aiming for 3 °C", "Well below 2 °C, aiming for 1.5 °C", "At exactly 1 °C by 2030", "Below 3 °C, aiming for 2.5 °C"], "e": "Measured against pre-industrial levels; agreed at COP-21, in force 2016."}, "hi": {"q": "पेरिस समझौते (2015) का दीर्घकालिक तापमान लक्ष्य वैश्विक तापन को रखना है:", "o": ["4 °C से नीचे, लक्ष्य 3 °C", "2 °C से काफ़ी नीचे, लक्ष्य 1.5 °C", "2030 तक ठीक 1 °C पर", "3 °C से नीचे, लक्ष्य 2.5 °C"], "e": "पूर्व-औद्योगिक स्तर की तुलना में; COP-21 में सहमति, 2016 में लागू।"}}, {"a": 0, "en": {"q": "Under the Paris Agreement, the climate action plans that each country submits are called:", "o": ["NDCs", "CERs", "CDMs", "ODSs"], "e": "Nationally Determined Contributions, updated every five years."}, "hi": {"q": "पेरिस समझौते के तहत हर देश द्वारा प्रस्तुत जलवायु कार्य योजनाओं को कहते हैं:", "o": ["NDCs", "CERs", "CDMs", "ODSs"], "e": "राष्ट्रीय स्तर पर निर्धारित योगदान (Nationally Determined Contributions), हर पाँच वर्ष में अद्यतन।"}}, {"a": 3, "en": {"q": "The Intergovernmental Panel on Climate Change (IPCC) was set up in 1988 by:", "o": ["WHO and FAO", "UNDP and IMF", "World Bank and WTO", "WMO and UNEP"], "e": "IPCC prepares assessment reports (latest AR6, 2021–23); it shared the Nobel Peace Prize in 2007."}, "hi": {"q": "जलवायु परिवर्तन पर अंतर-सरकारी पैनल (IPCC) की स्थापना 1988 में किसने की?", "o": ["WHO और FAO", "UNDP और IMF", "विश्व बैंक और WTO", "WMO और UNEP"], "e": "IPCC आकलन रिपोर्टें तैयार करता है (नवीनतम AR6, 2021–23); इसे 2007 में नोबेल शांति पुरस्कार (साझा) मिला।"}}, {"a": 2, "en": {"q": "At which conference was the first Global Stocktake completed, with parties agreeing to \"transition away from fossil fuels\"?", "o": ["COP-26, Glasgow", "COP-27, Sharm el-Sheikh", "COP-28, Dubai", "COP-29, Baku"], "e": "COP-28, Dubai, UAE (2023)."}, "hi": {"q": "किस सम्मेलन में पहला ग्लोबल स्टॉकटेक पूरा हुआ और पक्षकार \"जीवाश्म ईंधनों से दूर संक्रमण\" पर सहमत हुए?", "o": ["COP-26, ग्लासगो", "COP-27, शर्म अल-शेख", "COP-28, दुबई", "COP-29, बाकू"], "e": "COP-28, दुबई, UAE (2023)।"}}, {"a": 1, "en": {"q": "A \"Loss and Damage\" fund for climate-vulnerable countries was first agreed at:", "o": ["COP-26, Glasgow", "COP-27, Sharm el-Sheikh", "COP-28, Dubai", "COP-29, Baku"], "e": "Agreed at COP-27, Egypt (2022); made operational at COP-28."}, "hi": {"q": "जलवायु-संवेदनशील देशों के लिए \"हानि एवं क्षति (Loss and Damage)\" कोष पर पहली बार सहमति कहाँ बनी?", "o": ["COP-26, ग्लासगो", "COP-27, शर्म अल-शेख", "COP-28, दुबई", "COP-29, बाकू"], "e": "COP-27, मिस्र (2022) में सहमति; COP-28 में चालू हुआ।"}}, {"a": 2, "en": {"q": "Which of the following is NOT one of the eight missions under India's NAPCC (2008)?", "o": ["National Water Mission", "Green India Mission", "Clean Ganga Mission", "Sustainable Habitat Mission"], "e": "The National Mission for Clean Ganga (Namami Gange) is separate. NAPCC: Solar, Energy Efficiency, Sustainable Habitat, Water, Himalayan Ecosystem, Green India, Sustainable Agriculture, Strategic Knowledge."}, "hi": {"q": "निम्न में से कौन भारत की NAPCC (2008) के आठ मिशनों में शामिल नहीं है?", "o": ["राष्ट्रीय जल मिशन", "हरित भारत मिशन", "स्वच्छ गंगा मिशन", "सतत आवास मिशन"], "e": "राष्ट्रीय स्वच्छ गंगा मिशन (नमामि गंगे) अलग कार्यक्रम है। NAPCC: सौर, ऊर्जा दक्षता, सतत आवास, जल, हिमालयी पारितंत्र, हरित भारत, सतत कृषि, रणनीतिक ज्ञान।"}}, {"a": 1, "en": {"q": "Which NAPCC mission focuses on protecting glaciers and mountain ecology?", "o": ["National Water Mission", "Himalayan Ecosystem Mission", "Green India Mission", "Strategic Knowledge Mission"], "e": "Full name: National Mission for Sustaining the Himalayan Ecosystem."}, "hi": {"q": "NAPCC का कौन-सा मिशन हिमनदों और पर्वतीय पारिस्थितिकी की सुरक्षा पर केंद्रित है?", "o": ["राष्ट्रीय जल मिशन", "हिमालयी पारितंत्र मिशन", "हरित भारत मिशन", "रणनीतिक ज्ञान मिशन"], "e": "पूरा नाम: हिमालयी पारितंत्र को बनाए रखने हेतु राष्ट्रीय मिशन।"}}, {"a": 1, "en": {"q": "State Action Plans on Climate Change (SAPCCs) are prepared mainly to:", "o": ["Replace India's NDC under Paris", "Apply NAPCC at the state level", "Fix emission caps for each city", "Regulate only industrial pollution"], "e": "SAPCCs adapt NAPCC to local vulnerabilities such as water, health, agriculture and forests."}, "hi": {"q": "जलवायु परिवर्तन पर राज्य कार्य योजनाएँ (SAPCC) मुख्यतः किस लिए बनाई जाती हैं?", "o": ["पेरिस के तहत भारत के NDC की जगह लेने", "NAPCC को राज्य स्तर पर लागू करने", "हर शहर की उत्सर्जन सीमा तय करने", "केवल औद्योगिक प्रदूषण नियंत्रित करने"], "e": "SAPCC, NAPCC को जल, स्वास्थ्य, कृषि और वन जैसी स्थानीय संवेदनशीलताओं के अनुसार ढालती हैं।"}}, {"a": 2, "en": {"q": "Under India's Panchamrit (COP-26, 2021), the target for non-fossil energy capacity by 2030 is:", "o": ["175 GW", "300 GW", "500 GW", "1,000 GW"], "e": "Other Panchamrit targets: 50% energy from renewables, 1 billion tonne emission cut, 45% lower carbon intensity by 2030, and net-zero by 2070. 175 GW was the old 2022 renewable target (trap)."}, "hi": {"q": "भारत के पंचामृत (COP-26, 2021) के तहत 2030 तक गैर-जीवाश्म ऊर्जा क्षमता का लक्ष्य है:", "o": ["175 GW", "300 GW", "500 GW", "1,000 GW"], "e": "पंचामृत के अन्य लक्ष्य: 2030 तक 50% ऊर्जा नवीकरणीय से, 1 अरब टन उत्सर्जन कटौती, कार्बन तीव्रता में 45% कमी, और 2070 तक नेट-ज़ीरो। 175 GW पुराना 2022 का नवीकरणीय लक्ष्य था (ट्रैप)।"}}, {"a": 0, "en": {"q": "Mission LiFE, announced by India at COP-26, mainly promotes:", "o": ["Mindful lifestyle choices by individuals", "Banning all fossil fuels by 2030", "A carbon tax on every household", "Nuclear power plants in every state"], "e": "Lifestyle for Environment – \"pro-planet people\"; individual → government → global action."}, "hi": {"q": "भारत द्वारा COP-26 में घोषित मिशन LiFE मुख्यतः किसे बढ़ावा देता है?", "o": ["व्यक्तियों द्वारा सजग जीवनशैली विकल्प", "2030 तक सभी जीवाश्म ईंधनों पर प्रतिबंध", "हर घर पर कार्बन टैक्स", "हर राज्य में परमाणु बिजली संयंत्र"], "e": "पर्यावरण के लिए जीवनशैली (Lifestyle for Environment) – \"प्रो-प्लैनेट पीपल\"; व्यक्ति → सरकार → वैश्विक कार्रवाई।"}}, {"a": 3, "en": {"q": "The International Solar Alliance (ISA) was launched in 2015 at COP-21, Paris, by India and:", "o": ["USA", "Japan", "Germany", "France"], "e": "ISA headquarters is in Gurugram, India."}, "hi": {"q": "अंतर्राष्ट्रीय सौर गठबंधन (ISA) 2015 में COP-21, पेरिस में भारत और किस देश ने शुरू किया?", "o": ["USA", "जापान", "जर्मनी", "फ्रांस"], "e": "ISA का मुख्यालय गुरुग्राम, भारत में है।"}}];
+
+const N = Q.length, TOTAL = Math.round(N*48), K = "abcd";
+let lang = "en", cur = 0, ans, visited, marked, left, tick, done = false;
+const $ = id => document.getElementById(id);
+const t = k => UI[lang][k];
+
+function setLang(l){
+  lang = l;
+  document.documentElement.lang = l;
+  document.body.classList.toggle("hi", l === "hi");
+  $("bEn").setAttribute("aria-pressed", l === "en");
+  $("bHi").setAttribute("aria-pressed", l === "hi");
+  document.querySelectorAll("[data-t]").forEach(el => { const v = t(el.dataset.t); if (typeof v === "string") el.textContent = v; });
+  $("rules").innerHTML = t("rules").map(r => `<li>${r}</li>`).join("");
+  $("legend").innerHTML = t("legend").map(([c,l]) => `<span><i style="background:${c}"></i>${l}</span>`).join("");
+  if ($("quiz").style.display === "grid") renderQ();
+  if (done) renderResult();
+}
+
+function reset(){
+  ans = Array(N).fill(null); visited = Array(N).fill(false); marked = Array(N).fill(false);
+  cur = 0; left = TOTAL; done = false;
+}
+
+function startTest(){
+  reset();
+  $("start").style.display = "none"; $("result").style.display = "none";
+  $("quiz").style.display = "grid"; $("timer").style.display = "block";
+  renderQ(); updTimer();
+  clearInterval(tick);
+  tick = setInterval(() => { left--; updTimer(); if (left <= 0) { finish(true); } }, 1000);
+  window.scrollTo(0,0);
+}
+
+function updTimer(){
+  const m = Math.floor(Math.max(left,0)/60), s = Math.max(left,0)%60;
+  $("timer").textContent = `${String(m).padStart(2,"0")}:${String(s).padStart(2,"0")}`;
+  $("timer").classList.toggle("low", left <= 120);
+}
+
+function renderQ(){
+  visited[cur] = true;
+  const q = Q[cur][lang];
+  $("qno").textContent = `${t("q")} ${cur+1} ${t("of")} ${N}`;
+  $("qtext").textContent = q.q;
+  $("opts").innerHTML = q.o.map((o,i) =>
+    `<button class="opt" role="radio" aria-checked="${ans[cur]===i}" data-i="${i}"><span class="k">${K[i]}</span><span>${o}</span></button>`).join("");
+  $("opts").querySelectorAll(".opt").forEach(b => b.onclick = () => { ans[cur] = +b.dataset.i; renderQ(); });
+  $("prevBtn").disabled = cur === 0;
+  renderPal();
+}
+
+function renderPal(){
+  $("pal").innerHTML = Q.map((_,i) => {
+    let c = "";
+    if (marked[i]) c = ans[i] !== null ? "mka" : "mk";
+    else if (ans[i] !== null) c = "ans";
+    else if (visited[i]) c = "na";
+    return `<button class="${c}${i===cur?" cur":""}" data-i="${i}" aria-label="${t("q")} ${i+1}">${i+1}</button>`;
+  }).join("");
+  $("pal").querySelectorAll("button").forEach(b => b.onclick = () => { cur = +b.dataset.i; renderQ(); });
+  const a = ans.filter(x => x !== null).length, mk = marked.filter(Boolean).length;
+  const nv = visited.filter(v => !v).length, na = visited.filter((v,i) => v && ans[i] === null).length;
+  $("counts").innerHTML = [[t("cAns"),a],[t("cNa"),na],[t("cMk"),mk],[t("cNv"),nv]].map(([l,v]) => `<div><span>${l}</span><b>${v}</b></div>`).join("");
+}
+
+function go(d){ if (cur + d >= 0 && cur + d < N) { cur += d; renderQ(); window.scrollTo({top:0}); } }
+
+function askSubmit(){
+  const a = ans.filter(x => x !== null).length;
+  $("mBody").textContent = UI[lang].mBody(a, N - a);
+  $("modal").style.display = "grid"; $("mYes").focus();
+}
+
+function finish(auto){
+  clearInterval(tick); done = true;
+  $("modal").style.display = "none";
+  $("quiz").style.display = "none"; $("timer").style.display = "none";
+  $("result").style.display = "block";
+  renderResult();
+  if (auto) alert(t("timeUp"));
+  window.scrollTo(0,0);
+}
+
+function renderResult(){
+  let c = 0, w = 0;
+  Q.forEach((q,i) => { if (ans[i] === null) return; ans[i] === q.a ? c++ : w++; });
+  const s = N - c - w, score = Math.round((c - w/3) * 100) / 100;
+  const acc = c + w ? Math.round(c / (c + w) * 100) : 0;
+  $("scoreVal").textContent = score;
+  const pct = Math.max(0, score) / N * 100;
+  $("ring").style.background = `conic-gradient(var(--leaf) ${pct}%, var(--chip) 0)`;
+  $("stats").innerHTML = [[t("sC"),c,"var(--leaf)"],[t("sW"),w,"var(--red)"],[t("sS"),s,"var(--amber)"],[t("sA"),acc+"%","var(--ink)"]]
+    .map(([l,v,col]) => `<div class="stat"><strong style="color:${col}">${v}</strong><span>${l}</span></div>`).join("");
+  const v = t("verdicts"); $("verdict").textContent = score < 10 ? v[0] : score < 16 ? v[1] : score < 21 ? v[2] : v[3];
+  $("review").innerHTML = Q.map((q,i) => {
+    const d = q[lang], u = ans[i], st = u === null ? "s" : u === q.a ? "c" : "w";
+    const tag = st === "c" ? t("tC") : st === "w" ? t("tW") : t("tS");
+    const opts = d.o.map((o,j) => `<li class="${j===q.a?"right":(j===u?"wrong":"")}">(${K[j]}) ${o}</li>`).join("");
+    return `<div class="rv ${st}"><span class="tag">${t("q")} ${i+1} · ${tag}</span><p>${d.q}</p><ul>${opts}</ul><div class="exp"><b>${t("ans")}: (${K[q.a]})</b> – ${d.e}</div></div>`;
+  }).join("");
+}
+
+$("bEn").onclick = () => setLang("en");
+$("bHi").onclick = () => setLang("hi");
+$("startBtn").onclick = startTest;
+$("retryBtn").onclick = startTest;
+$("prevBtn").onclick = () => go(-1);
+$("nextBtn").onclick = () => { if (cur === N-1) renderQ(); else go(1); };
+$("clearBtn").onclick = () => { ans[cur] = null; renderQ(); };
+$("markBtn").onclick = () => { marked[cur] = !marked[cur]; if (cur < N-1) go(1); else renderQ(); };
+$("submitBtn").onclick = askSubmit;
+$("mNo").onclick = () => { $("modal").style.display = "none"; };
+$("mYes").onclick = () => finish(false);
+document.addEventListener("keydown", e => {
+  if ($("modal").style.display === "grid" && e.key === "Escape") $("modal").style.display = "none";
+  if ($("quiz").style.display !== "grid" || $("modal").style.display === "grid") return;
+  if (["1","2","3","4"].includes(e.key)) { ans[cur] = +e.key - 1; renderQ(); }
+  if (e.key === "ArrowRight") go(1);
+  if (e.key === "ArrowLeft") go(-1);
+});
+reset(); setLang("en");
+</script>
+</body>
+</html>
