@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Environment Set 6 – RRB JE CBT-2 | THE EXAM ENGINEER</title>
+<meta name="description" content="RRB JE CBT-2 Environment Set 6 – Acid Rain, Ozone, Laws & Protected Areas. 25 bilingual PYQ-based questions with 1/3 negative marking. THE EXAM ENGINEER.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Noto+Sans+Devanagari:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --forest:#0f4a2d; --forest-2:#0b3320; --leaf:#16a34a; --leaf-soft:#e7f6ec;
+  --amber:#f59e0b; --red:#dc2626; --red-soft:#fdecec; --violet:#7c3aed;
+  --bg:#f3f6f2; --card:#ffffff; --ink:#17251d; --muted:#5b6b62; --line:#d8e2db; --chip:#e9eeea;
+  --head-ink:#ffffff;
+}
+@media (prefers-color-scheme: dark){
+  :root{
+    color-scheme: dark;
+    --forest:#0f3d26; --forest-2:#0a2a1a; --leaf:#34c26a; --leaf-soft:#123222;
+    --amber:#fbbf24; --red:#f87171; --red-soft:#3a1717; --violet:#a78bfa;
+    --bg:#0e1511; --card:#16211b; --ink:#e6efe9; --muted:#9db0a5; --line:#2a3a31; --chip:#223029;
+    --head-ink:#ffffff;
+  }
+}
+*{box-sizing:border-box}
+html,body{margin:0}
+body{font-family:"Poppins","Noto Sans Devanagari",system-ui,sans-serif;background:var(--bg);color:var(--ink);line-height:1.55;-webkit-text-size-adjust:100%}
+body.hi{font-family:"Noto Sans Devanagari","Poppins",system-ui,sans-serif}
+button{font:inherit;cursor:pointer}
+button:focus-visible,a:focus-visible{outline:3px solid var(--amber);outline-offset:2px}
+a{color:inherit}
+
+/* header */
+header{background:linear-gradient(160deg,var(--forest),var(--forest-2));color:var(--head-ink);padding:12px 16px}
+.hwrap{max-width:1040px;margin:0 auto;display:flex;align-items:center;gap:12px;flex-wrap:wrap}
+.logo{width:40px;height:40px;border-radius:50%;background:#22c55e;color:#0b3320;display:grid;place-items:center;font-weight:700;flex:none}
+.brand{flex:1;min-width:180px}
+.brand b{display:block;font-size:16px;letter-spacing:.3px}
+.brand a{font-size:12px;opacity:.85;text-decoration:none}
+.lang{display:flex;background:rgba(255,255,255,.12);border-radius:999px;padding:3px}
+.lang button{border:0;background:transparent;color:#fff;padding:6px 14px;border-radius:999px;font-size:13px;font-weight:600}
+.lang button[aria-pressed="true"]{background:#fff;color:var(--forest)}
+.timer{font-variant-numeric:tabular-nums;font-weight:700;background:rgba(255,255,255,.12);padding:6px 12px;border-radius:8px;font-size:15px;display:none}
+.timer.low{background:var(--red);color:#fff}
+
+main{max-width:1040px;margin:0 auto;padding:18px 14px 40px}
+.panel{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:20px}
+
+/* start screen */
+.start h1{font-size:clamp(22px,4.6vw,32px);line-height:1.25;margin:4px 0 6px;color:var(--ink)}
+.start .sub{color:var(--muted);margin:0 0 16px}
+.facts{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin:14px 0 18px}
+.fact{border:1px solid var(--line);border-radius:10px;padding:10px;text-align:center}
+.fact strong{display:block;font-size:22px;color:var(--leaf)}
+.fact span{font-size:12.5px;color:var(--muted)}
+.rules{margin:0 0 18px;padding-left:20px}
+.rules li{margin:4px 0}
+.legend{display:flex;flex-wrap:wrap;gap:12px;font-size:13px;color:var(--muted);margin-bottom:18px}
+.legend i{display:inline-block;width:14px;height:14px;border-radius:4px;vertical-align:-2px;margin-right:5px}
+.btn{border:0;border-radius:10px;padding:11px 18px;font-weight:600;font-size:15px}
+.btn-main{background:var(--leaf);color:#fff}
+.btn-ghost{background:var(--chip);color:var(--ink)}
+.btn-warn{background:var(--violet);color:#fff}
+.btn-red{background:var(--red);color:#fff}
+.copy{font-size:12px;color:var(--muted);margin-top:16px}
+
+/* quiz */
+.quiz{display:none;grid-template-columns:1fr 270px;gap:16px;align-items:start}
+.qhead{display:flex;justify-content:space-between;align-items:center;margin-bottom:10px;color:var(--muted);font-size:14px}
+.qhead b{color:var(--ink)}
+.marks{font-size:12.5px}
+.qtext{font-size:17px;font-weight:500;margin:0 0 16px}
+body.hi .qtext{font-size:18px}
+.opts{display:grid;gap:10px}
+.opt{display:flex;gap:12px;align-items:flex-start;text-align:left;width:100%;background:transparent;border:1.5px solid var(--line);border-radius:10px;padding:12px 14px;color:var(--ink)}
+.opt .k{flex:none;width:28px;height:28px;border-radius:50%;border:1.5px solid var(--line);display:grid;place-items:center;font-weight:600;font-size:13px}
+.opt[aria-checked="true"]{border-color:var(--leaf);background:var(--leaf-soft)}
+.opt[aria-checked="true"] .k{background:var(--leaf);border-color:var(--leaf);color:#fff}
+.actions{display:flex;flex-wrap:wrap;gap:8px;margin-top:18px}
+.actions .sp{flex:1}
+.side h3{margin:0 0 10px;font-size:15px}
+.pal{display:grid;grid-template-columns:repeat(5,1fr);gap:7px}
+.pal button{border:0;border-radius:8px;height:38px;font-weight:600;background:var(--chip);color:var(--ink)}
+.pal button.ans{background:var(--leaf);color:#fff}
+.pal button.na{background:var(--red);color:#fff}
+.pal button.mk{background:var(--violet);color:#fff}
+.pal button.mka{background:var(--violet);color:#fff;box-shadow:inset 0 -5px 0 var(--leaf)}
+.pal button.cur{outline:3px solid var(--amber);outline-offset:1px}
+.counts{font-size:13px;color:var(--muted);margin:12px 0}
+.counts div{display:flex;justify-content:space-between}
+
+/* result */
+.result{display:none}
+.score{display:flex;flex-wrap:wrap;gap:18px;align-items:center;margin-bottom:16px}
+.ring{width:130px;height:130px;border-radius:50%;display:grid;place-items:center;flex:none}
+.ring div{width:104px;height:104px;border-radius:50%;background:var(--card);display:grid;place-items:center;text-align:center}
+.ring strong{font-size:26px;line-height:1}
+.ring span{font-size:12px;color:var(--muted)}
+.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;flex:1;min-width:260px}
+.stat{border:1px solid var(--line);border-radius:10px;padding:10px;text-align:center}
+.stat strong{display:block;font-size:20px}
+.stat span{font-size:12.5px;color:var(--muted)}
+.verdict{margin:0 0 16px;font-weight:500}
+.review{margin-top:18px;display:grid;gap:12px}
+.rv{border:1px solid var(--line);border-left:5px solid var(--line);border-radius:10px;padding:12px 14px}
+.rv.c{border-left-color:var(--leaf)} .rv.w{border-left-color:var(--red)} .rv.s{border-left-color:var(--amber)}
+.rv .tag{font-size:12px;font-weight:600}
+.rv.c .tag{color:var(--leaf)} .rv.w .tag{color:var(--red)} .rv.s .tag{color:var(--amber)}
+.rv p{margin:6px 0}
+.rv ul{list-style:none;padding:0;margin:6px 0;display:grid;gap:4px}
+.rv li{padding:5px 9px;border-radius:7px;font-size:14.5px}
+.rv li.right{background:var(--leaf-soft);color:var(--leaf);font-weight:600}
+.rv li.wrong{background:var(--red-soft);color:var(--red);text-decoration:line-through}
+.exp{font-size:14px;color:var(--muted);background:var(--chip);border-radius:8px;padding:8px 10px}
+.join{display:flex;flex-wrap:wrap;gap:10px;align-items:center;justify-content:space-between;background:var(--leaf-soft);border:1px solid var(--line);border-radius:12px;padding:12px 14px;margin-top:16px}
+.join a.btn{text-decoration:none}
+footer{text-align:center;font-size:12.5px;color:var(--muted);padding:0 14px 30px}
+footer a{color:var(--leaf);font-weight:600;text-decoration:none}
+
+/* modal */
+.modal{position:fixed;inset:0;background:rgba(0,0,0,.5);display:none;place-items:center;padding:16px;z-index:10}
+.modal .box{background:var(--card);color:var(--ink);border-radius:14px;max-width:420px;width:100%;padding:20px}
+.modal h3{margin:0 0 8px}
+.modal .row{display:flex;gap:8px;justify-content:flex-end;margin-top:16px}
+
+@media (max-width:820px){
+  .quiz{grid-template-columns:1fr}
+  .facts{grid-template-columns:repeat(2,1fr)}
+  .stats{grid-template-columns:repeat(2,1fr)}
+}
+@media (prefers-reduced-motion:no-preference){
+  .opt,.pal button{transition:background .15s,border-color .15s}
+}
+</style>
+</head>
+<body>
+<header>
+  <div class="hwrap">
+    <div class="logo">TE</div>
+    <div class="brand"><b>THE EXAM ENGINEER</b><a href="https://t.me/the_exam_engineer" target="_blank" rel="noopener">t.me/the_exam_engineer</a></div>
+    <div class="timer" id="timer" aria-live="off">20:00</div>
+    <div class="lang" role="group" aria-label="Language">
+      <button id="bEn" aria-pressed="true">English</button>
+      <button id="bHi" aria-pressed="false">हिंदी</button>
+    </div>
+  </div>
+</header>
+
+<main>
+  <!-- START -->
+  <section class="panel start" id="start">
+    <div class="sub" data-t="kicker"></div>
+    <h1 data-t="title"></h1>
+    <p class="sub" data-t="subtitle"></p>
+    <div class="facts">
+      <div class="fact"><strong id="nQ">25</strong><span data-t="fQ"></span></div>
+      <div class="fact"><strong id="nT">20</strong><span data-t="fT"></span></div>
+      <div class="fact"><strong>+1</strong><span data-t="fR"></span></div>
+      <div class="fact"><strong>−⅓</strong><span data-t="fW"></span></div>
+    </div>
+    <ul class="rules" id="rules"></ul>
+    <div class="legend" id="legend"></div>
+    <button class="btn btn-main" id="startBtn" data-t="start"></button>
+    <p class="copy" data-t="copy"></p>
+  </section>
+
+  <!-- QUIZ -->
+  <section class="quiz" id="quiz">
+    <div class="panel">
+      <div class="qhead"><span><b id="qno"></b></span><span class="marks" data-t="marks"></span></div>
+      <p class="qtext" id="qtext"></p>
+      <div class="opts" id="opts" role="radiogroup"></div>
+      <div class="actions">
+        <button class="btn btn-ghost" id="prevBtn" data-t="prev"></button>
+        <button class="btn btn-ghost" id="clearBtn" data-t="clear"></button>
+        <span class="sp"></span>
+        <button class="btn btn-warn" id="markBtn" data-t="mark"></button>
+        <button class="btn btn-main" id="nextBtn" data-t="next"></button>
+      </div>
+    </div>
+    <aside class="panel side">
+      <h3 data-t="palette"></h3>
+      <div class="pal" id="pal"></div>
+      <div class="counts" id="counts"></div>
+      <button class="btn btn-red" style="width:100%" id="submitBtn" data-t="submit"></button>
+    </aside>
+  </section>
+
+  <!-- RESULT -->
+  <section class="panel result" id="result">
+    <h2 data-t="resTitle" style="margin-top:0"></h2>
+    <div class="score">
+      <div class="ring" id="ring"><div><strong id="scoreVal"></strong><span data-t="outOf"></span></div></div>
+      <div class="stats" id="stats"></div>
+    </div>
+    <p class="verdict" id="verdict"></p>
+    <div style="display:flex;gap:8px;flex-wrap:wrap">
+      <button class="btn btn-main" id="retryBtn" data-t="retry"></button>
+    </div>
+    <div class="join">
+      <span data-t="joinTxt"></span>
+      <a class="btn btn-main" href="https://t.me/the_exam_engineer" target="_blank" rel="noopener" data-t="joinBtn"></a>
+    </div>
+    <h3 data-t="revTitle" style="margin:22px 0 0"></h3>
+    <div class="review" id="review"></div>
+  </section>
+</main>
+
+<footer>© 2026 THE EXAM ENGINEER · <span data-t="foot"></span> · <a href="https://t.me/the_exam_engineer" target="_blank" rel="noopener">t.me/the_exam_engineer</a></footer>
+
+<div class="modal" id="modal" role="dialog" aria-modal="true" aria-labelledby="mTitle">
+  <div class="box">
+    <h3 id="mTitle" data-t="mTitle"></h3>
+    <div id="mBody"></div>
+    <div class="row">
+      <button class="btn btn-ghost" id="mNo" data-t="mNo"></button>
+      <button class="btn btn-red" id="mYes" data-t="mYes"></button>
+    </div>
+  </div>
+</div>
+
+<script>
+const UI = {
+ en:{kicker:"RRB JE CBT-2 (2026) · Basics of Environment & Pollution Control",
+  title:"Environment Set 6 – Acid Rain, Ozone, Laws & Protected Areas",
+  subtitle:"Conceptual, RRB JE PYQ based questions from Chapter 8 (Acid Rain), Chapter 9 (Ozone Depletion) and Chapters 10–11 (Laws & Protected Areas) of the Environment One Stop Solution.",
+  fQ:"Questions",fT:"Minutes",fR:"Per correct answer",fW:"Per wrong answer",
+  rules:["Timer follows the CBT-2 pace: 150 questions in 120 minutes = 48 seconds per question.","Each correct answer gives +1 mark; each wrong answer deducts 1/3 mark. Unattempted questions get 0.","You can switch between English and Hindi at any time.","The test is submitted automatically when the time is over."],
+  legend:[["var(--chip)","Not visited"],["var(--red)","Not answered"],["var(--leaf)","Answered"],["var(--violet)","Marked for review"]],
+  start:"Start test",copy:"© 2026 THE EXAM ENGINEER. Free for practice. Do not copy or re-brand.",
+  marks:"+1 / −⅓",prev:"Previous",clear:"Clear response",mark:"Mark & next",next:"Save & next",palette:"Question palette",submit:"Submit test",
+  q:"Question",of:"of",cAns:"Answered",cNa:"Not answered",cMk:"Marked",cNv:"Not visited",
+  mTitle:"Submit the test?",mNo:"Go back",mYes:"Submit",
+  mBody:(a,u)=>`You have answered ${a} of 25 questions. ${u} are unanswered.`,
+  resTitle:"Your result",outOf:"out of 25",
+  sC:"Correct",sW:"Wrong",sS:"Skipped",sA:"Accuracy",
+  verdicts:["Revise Chapters 8 to 11 of the notes and try again.","Good start. Read the explanations for the questions you missed.","Strong score. Keep this accuracy in the exam.","Excellent. You are ready for these 10 marks."],
+  retry:"Retake test",joinTxt:"Sets 1 to 5 and the full Environment notes are available on the channel.",joinBtn:"Join THE EXAM ENGINEER",
+  revTitle:"Answers with explanation",tC:"Correct",tW:"Wrong",tS:"Not attempted",yours:"Your answer",ans:"Answer",
+  foot:"RRB JE CBT-2 Environment Set 6",timeUp:"Time is over. Your test has been submitted."},
+ hi:{kicker:"RRB JE CBT-2 (2026) · पर्यावरण की मूल बातें एवं प्रदूषण नियंत्रण",
+  title:"पर्यावरण सेट 6 – अम्लीय वर्षा, ओज़ोन, कानून एवं संरक्षित क्षेत्र",
+  subtitle:"पर्यावरण वन स्टॉप सॉल्यूशन के अध्याय 8 (अम्लीय वर्षा), अध्याय 9 (ओज़ोन क्षरण) और अध्याय 10–11 (कानून एवं संरक्षित क्षेत्र) से अवधारणात्मक, RRB JE PYQ आधारित प्रश्न।",
+  fQ:"प्रश्न",fT:"मिनट",fR:"प्रति सही उत्तर",fW:"प्रति गलत उत्तर",
+  rules:["टाइमर CBT-2 की गति पर है: 120 मिनट में 150 प्रश्न = प्रति प्रश्न 48 सेकंड।","हर सही उत्तर पर +1 अंक; हर गलत उत्तर पर 1/3 अंक कटेगा। छोड़े गए प्रश्न पर 0।","आप कभी भी English और हिंदी के बीच बदल सकते हैं।","समय समाप्त होते ही टेस्ट अपने-आप सबमिट हो जाएगा।"],
+  legend:[["var(--chip)","नहीं देखा"],["var(--red)","उत्तर नहीं दिया"],["var(--leaf)","उत्तर दिया"],["var(--violet)","रिव्यू हेतु चिह्नित"]],
+  start:"टेस्ट शुरू करें",copy:"© 2026 THE EXAM ENGINEER. अभ्यास हेतु निःशुल्क। कॉपी या री-ब्रांड न करें।",
+  marks:"+1 / −⅓",prev:"पिछला",clear:"उत्तर हटाएँ",mark:"चिह्नित करें व आगे",next:"सेव करें व आगे",palette:"प्रश्न पैलेट",submit:"टेस्ट सबमिट करें",
+  q:"प्रश्न",of:"/",cAns:"उत्तर दिया",cNa:"उत्तर नहीं दिया",cMk:"चिह्नित",cNv:"नहीं देखा",
+  mTitle:"टेस्ट सबमिट करें?",mNo:"वापस जाएँ",mYes:"सबमिट करें",
+  mBody:(a,u)=>`आपने 25 में से ${a} प्रश्नों के उत्तर दिए हैं। ${u} प्रश्न बिना उत्तर के हैं।`,
+  resTitle:"आपका परिणाम",outOf:"25 में से",
+  sC:"सही",sW:"गलत",sS:"छोड़े",sA:"सटीकता",
+  verdicts:["नोट्स के अध्याय 8 से 11 दोहराएँ और फिर से प्रयास करें।","अच्छी शुरुआत। जो प्रश्न छूटे उनकी व्याख्या पढ़ें।","बढ़िया स्कोर। परीक्षा में यही सटीकता बनाए रखें।","शानदार। आप इन 10 अंकों के लिए तैयार हैं।"],
+  retry:"टेस्ट दोबारा दें",joinTxt:"सेट 1 से 5 और पूरे पर्यावरण नोट्स चैनल पर उपलब्ध हैं।",joinBtn:"THE EXAM ENGINEER से जुड़ें",
+  revTitle:"व्याख्या सहित उत्तर",tC:"सही",tW:"गलत",tS:"प्रयास नहीं किया",yours:"आपका उत्तर",ans:"उत्तर",
+  foot:"RRB JE CBT-2 पर्यावरण सेट 6",timeUp:"समय समाप्त। आपका टेस्ट सबमिट हो गया है।"}
+};
+
+const Q = [{"a": 0, "en": {"q": "Even unpolluted rain is slightly acidic, with a pH of about 5.6, because:", "o": ["CO₂ forms carbonic acid", "N₂ forms nitric acid", "O₂ forms ozone in clouds", "Dust adds salts to rain"], "e": "Atmospheric CO₂ dissolves in rain to form weak carbonic acid. Rain is called acid rain only when its pH is below 5.6."}, "hi": {"q": "बिना प्रदूषण वाली वर्षा भी थोड़ी अम्लीय (pH लगभग 5.6) होती है, क्योंकि:", "o": ["CO₂ कार्बोनिक अम्ल बनाती है", "N₂ नाइट्रिक अम्ल बनाती है", "O₂ बादलों में ओज़ोन बनाती है", "धूल वर्षा में लवण मिलाती है"], "e": "वायुमंडलीय CO₂ वर्षा जल में घुलकर दुर्बल कार्बोनिक अम्ल बनाती है। pH 5.6 से कम होने पर ही उसे अम्लीय वर्षा कहते हैं।"}}, {"a": 3, "en": {"q": "Acid rain over a region is found to contain mainly sulphuric acid. The most likely main source of its precursor gas is:", "o": ["Paddy fields", "Wetlands", "Refrigerators", "Coal-fired power plants"], "e": "Burning sulphur-containing coal releases SO₂, which forms H₂SO₄. Paddy fields and wetlands release methane; refrigerators release CFCs."}, "hi": {"q": "किसी क्षेत्र की अम्लीय वर्षा में मुख्यतः सल्फ्यूरिक अम्ल पाया गया। इसकी पूर्ववर्ती गैस का सबसे संभावित मुख्य स्रोत है:", "o": ["धान के खेत", "आर्द्रभूमि", "रेफ़्रिजरेटर", "कोयला आधारित बिजली संयंत्र"], "e": "सल्फ़रयुक्त कोयला जलने से SO₂ निकलती है, जो H₂SO₄ बनाती है। धान के खेत व आर्द्रभूमि मीथेन तथा रेफ़्रिजरेटर CFC छोड़ते हैं।"}}, {"a": 2, "en": {"q": "Acidic gases and particles that settle directly on buildings, soil and leaves without rain, snow or fog are called:", "o": ["Wet deposition", "Condensation", "Dry deposition", "Precipitation"], "e": "Acid rain can come down as wet deposition (rain, snow, fog) or as dry deposition."}, "hi": {"q": "बिना वर्षा, हिम या कोहरे के इमारतों, मृदा और पत्तियों पर सीधे जमने वाली अम्लीय गैसें और कण कहलाते हैं:", "o": ["आर्द्र निक्षेपण", "संघनन", "शुष्क निक्षेपण", "वर्षण"], "e": "अम्लीय वर्षा आर्द्र निक्षेपण (वर्षा, हिम, कोहरा) या शुष्क निक्षेपण के रूप में हो सकती है।"}}, {"a": 3, "en": {"q": "Acid rain kills fish in lakes mainly because it:", "o": ["Raises the lake's pH sharply", "Adds excess nitrogen to fish", "Increases dissolved oxygen", "Releases toxic aluminium into water"], "e": "The acid leaches aluminium from soil into the lake, and the aluminium damages fish gills – hence \"lake killer\" (Scandinavia)."}, "hi": {"q": "अम्लीय वर्षा झीलों में मछलियों को मुख्यतः क्यों मारती है?", "o": ["झील का pH तेज़ी से बढ़ा देती है", "मछलियों में अतिरिक्त नाइट्रोजन मिलाती है", "घुलित ऑक्सीजन बढ़ा देती है", "जल में विषैला एल्युमिनियम मुक्त करती है"], "e": "अम्ल मृदा से एल्युमिनियम झील में बहा देता है, जो मछलियों के गलफड़ों को क्षति पहुँचाता है – इसीलिए \"लेक किलर\" (स्कैंडिनेविया)।"}}, {"a": 2, "en": {"q": "The yellowing of the Taj Mahal's marble happens because acid rain reacts with CaCO₃ to form:", "o": ["CaO", "CaCl₂", "CaSO₄", "Ca(OH)₂"], "e": "Sulphuric acid converts marble into calcium sulphate (gypsum) – \"stone cancer\". The Taj Trapezium Zone was created to protect it."}, "hi": {"q": "ताजमहल के संगमरमर का पीलापन इसलिए होता है क्योंकि अम्लीय वर्षा CaCO₃ से अभिक्रिया करके बनाती है:", "o": ["CaO", "CaCl₂", "CaSO₄", "Ca(OH)₂"], "e": "सल्फ्यूरिक अम्ल संगमरमर को कैल्शियम सल्फ़ेट (जिप्सम) में बदलता है – \"स्टोन कैंसर\"। इसकी रक्षा हेतु ताज ट्रेपेज़ियम ज़ोन बनाया गया।"}}, {"a": 0, "en": {"q": "To restore a lake that has become acidic, powdered limestone is added to its water. This process is called:", "o": ["Liming", "Chlorination", "Desalination", "Aeration"], "e": "Limestone (CaCO₃) neutralises the acid and raises the pH."}, "hi": {"q": "अम्लीय हो चुकी झील को सुधारने के लिए उसके जल में चूना-पत्थर का चूर्ण डाला जाता है। यह प्रक्रिया कहलाती है:", "o": ["चूनाकरण (Liming)", "क्लोरीनीकरण", "विलवणीकरण", "वातन (Aeration)"], "e": "चूना-पत्थर (CaCO₃) अम्ल को उदासीन कर pH बढ़ाता है।"}}, {"a": 1, "en": {"q": "The ozone layer lies mainly in the ______ and absorbs ______ radiation.", "o": ["Troposphere, infrared", "Stratosphere, UV-B", "Mesosphere, X-ray", "Thermosphere, visible"], "e": "About 15–35 km high, densest at around 20–25 km."}, "hi": {"q": "ओज़ोन परत मुख्यतः ______ में स्थित है और ______ विकिरण अवशोषित करती है।", "o": ["क्षोभमंडल, अवरक्त", "समतापमंडल, UV-B", "मध्यमंडल, X-किरण", "तापमंडल, दृश्य प्रकाश"], "e": "लगभग 15–35 km ऊँचाई पर, सबसे सघन लगभग 20–25 km पर।"}}, {"a": 3, "en": {"q": "An \"ozone hole\" is said to have formed when total ozone over a region falls below:", "o": ["300 DU", "500 DU", "100 DU", "220 DU"], "e": "Normal ozone is about 300 DU (trap). 1 DU = 0.01 mm of pure ozone at STP."}, "hi": {"q": "किसी क्षेत्र के ऊपर कुल ओज़ोन कितने से नीचे गिरने पर \"ओज़ोन छिद्र\" बना हुआ माना जाता है?", "o": ["300 DU", "500 DU", "100 DU", "220 DU"], "e": "सामान्य ओज़ोन लगभग 300 DU है (ट्रैप)। 1 DU = STP पर शुद्ध ओज़ोन की 0.01 mm मोटाई।"}}, {"a": 0, "en": {"q": "A single chlorine atom released from a CFC can destroy thousands of ozone molecules because:", "o": ["It is regenerated after each cycle", "It reacts only with oxygen gas", "It absorbs all the UV radiation", "It changes into fluorine gas"], "e": "Cl + O₃ → ClO + O₂; ClO + O → Cl + O₂. Chlorine is freed again, so the chain continues (about 1,00,000 O₃ per Cl atom)."}, "hi": {"q": "CFC से मुक्त एक क्लोरीन परमाणु हज़ारों ओज़ोन अणुओं को नष्ट कर सकता है, क्योंकि:", "o": ["हर चक्र के बाद यह पुनः बन जाता है", "यह केवल ऑक्सीजन गैस से अभिक्रिया करता है", "यह सारा UV विकिरण अवशोषित कर लेता है", "यह फ़्लोरीन गैस में बदल जाता है"], "e": "Cl + O₃ → ClO + O₂; ClO + O → Cl + O₂। क्लोरीन फिर मुक्त हो जाता है, इसलिए श्रृंखला चलती रहती है (एक Cl से लगभग 1,00,000 O₃)।"}}, {"a": 2, "en": {"q": "The ozone hole over Antarctica develops mainly during:", "o": ["Summer (Dec–Jan)", "Winter (Jun–Jul)", "Spring (Sep–Oct)", "Autumn (Mar–Apr)"], "e": "Polar stratospheric clouds form in the dark winter; when sunlight returns in spring, chlorine is activated and destroys ozone rapidly."}, "hi": {"q": "अंटार्कटिका के ऊपर ओज़ोन छिद्र मुख्यतः कब विकसित होता है?", "o": ["ग्रीष्म (दिसम्बर–जनवरी)", "शीत (जून–जुलाई)", "वसंत (सितम्बर–अक्टूबर)", "शरद (मार्च–अप्रैल)"], "e": "अंधेरी सर्दियों में ध्रुवीय समतापमंडलीय बादल बनते हैं; वसंत में सूर्यप्रकाश लौटने पर क्लोरीन सक्रिय होकर ओज़ोन को तेज़ी से नष्ट करता है।"}}, {"a": 2, "en": {"q": "Halons, which are powerful ozone-depleting substances, were widely used in:", "o": ["Refrigerators", "Fertilisers", "Fire extinguishers", "Car batteries"], "e": "Halons contain bromine. Refrigerators used CFCs (trap)."}, "hi": {"q": "हैलोन, जो प्रबल ओज़ोन-क्षयकारी पदार्थ हैं, व्यापक रूप से किसमें उपयोग होते थे?", "o": ["रेफ़्रिजरेटर", "उर्वरक", "अग्निशामक", "कार बैटरी"], "e": "हैलोन में ब्रोमीन होता है। रेफ़्रिजरेटर में CFC उपयोग होते थे (ट्रैप)।"}}, {"a": 3, "en": {"q": "Which of the following is NOT an ozone-depleting substance?", "o": ["CFC-11", "Halon", "Carbon tetrachloride", "HFC-134a"], "e": "HFCs contain no chlorine or bromine, so they do not deplete ozone – but they are strong greenhouse gases."}, "hi": {"q": "निम्न में से कौन ओज़ोन-क्षयकारी पदार्थ नहीं है?", "o": ["CFC-11", "हैलोन", "कार्बन टेट्राक्लोराइड", "HFC-134a"], "e": "HFC में क्लोरीन या ब्रोमीन नहीं होता, इसलिए ये ओज़ोन का क्षरण नहीं करते – पर ये प्रबल ग्रीनहाउस गैसें हैं।"}}, {"a": 1, "en": {"q": "The Kigali Amendment (2016) to the Montreal Protocol aims to phase down:", "o": ["CFCs", "HFCs", "Halons", "Methane"], "e": "HFCs are controlled because of their high GWP; India must cut HFCs by 85% by 2047."}, "hi": {"q": "मॉन्ट्रियल प्रोटोकॉल का किगाली संशोधन (2016) किसमें चरणबद्ध कमी का लक्ष्य रखता है?", "o": ["CFCs", "HFCs", "हैलोन", "मीथेन"], "e": "उच्च GWP के कारण HFC नियंत्रित किए जाते हैं; भारत को 2047 तक HFC में 85% कटौती करनी है।"}}, {"a": 0, "en": {"q": "The framework convention for ozone-layer protection, which came before the Montreal Protocol, is the:", "o": ["Vienna Convention, 1985", "Basel Convention, 1989", "Ramsar Convention, 1971", "Rotterdam Convention, 1998"], "e": "Vienna (1985) set the framework; Montreal (1987) laid down the actual phase-out schedule."}, "hi": {"q": "ओज़ोन परत संरक्षण का रूपरेखा अभिसमय, जो मॉन्ट्रियल प्रोटोकॉल से पहले आया, है:", "o": ["वियना अभिसमय, 1985", "बेसल अभिसमय, 1989", "रामसर अभिसमय, 1971", "रॉटरडैम अभिसमय, 1998"], "e": "वियना (1985) ने रूपरेखा तय की; मॉन्ट्रियल (1987) ने वास्तविक चरणबद्ध समाप्ति की समय-सारणी तय की।"}}, {"a": 1, "en": {"q": "More UV-B reaching the Earth because of ozone depletion is most directly linked to:", "o": ["Night blindness and goitre", "Skin cancer and cataract", "Fluorosis and rickets", "Malaria and dengue"], "e": "Extra UV-B also weakens immunity and harms phytoplankton and crops."}, "hi": {"q": "ओज़ोन क्षरण के कारण पृथ्वी तक अधिक UV-B पहुँचने का सबसे प्रत्यक्ष संबंध है:", "o": ["रतौंधी और घेंघा", "त्वचा कैंसर और मोतियाबिंद", "फ्लोरोसिस और रिकेट्स", "मलेरिया और डेंगू"], "e": "अधिक UV-B प्रतिरक्षा भी कमज़ोर करता है और पादपप्लवक व फ़सलों को हानि पहुँचाता है।"}}, {"a": 2, "en": {"q": "According to the UNEP/WMO 2022 assessment, the Antarctic ozone layer is expected to return to its 1980 level around:", "o": ["2030", "2045", "2066", "2100"], "e": "About 2040 for most of the world, 2045 for the Arctic (trap) and 2066 for Antarctica."}, "hi": {"q": "UNEP/WMO 2022 आकलन के अनुसार अंटार्कटिका की ओज़ोन परत लगभग कब तक 1980 के स्तर पर लौटने की उम्मीद है?", "o": ["2030", "2045", "2066", "2100"], "e": "विश्व के अधिकांश भाग के लिए लगभग 2040, आर्कटिक के लिए 2045 (ट्रैप) और अंटार्कटिका के लिए 2066।"}}, {"a": 0, "en": {"q": "The Central Pollution Control Board (CPCB) was constituted under the:", "o": ["Water Act, 1974", "Air Act, 1981", "EP Act, 1986", "Forest Act, 1980"], "e": "CPCB was set up in September 1974 under the Water (Prevention & Control of Pollution) Act."}, "hi": {"q": "केंद्रीय प्रदूषण नियंत्रण बोर्ड (CPCB) का गठन किसके अंतर्गत हुआ?", "o": ["जल अधिनियम, 1974", "वायु अधिनियम, 1981", "EP अधिनियम, 1986", "वन अधिनियम, 1980"], "e": "CPCB का गठन सितम्बर 1974 में जल (प्रदूषण निवारण एवं नियंत्रण) अधिनियम के तहत हुआ।"}}, {"a": 2, "en": {"q": "The National Green Tribunal (NGT), a fast-track court for environmental cases, was established in:", "o": ["1986", "2002", "2010", "2016"], "e": "Set up under the NGT Act, 2010; principal bench in New Delhi."}, "hi": {"q": "पर्यावरण मामलों के फ़ास्ट-ट्रैक न्यायालय, राष्ट्रीय हरित अधिकरण (NGT) की स्थापना कब हुई?", "o": ["1986", "2002", "2010", "2016"], "e": "NGT अधिनियम, 2010 के तहत स्थापित; प्रधान पीठ नई दिल्ली में।"}}, {"a": 3, "en": {"q": "The National Biodiversity Authority, set up under the Biological Diversity Act, 2002, is headquartered in:", "o": ["New Delhi", "Dehradun", "Kolkata", "Chennai"], "e": "NBA is in Chennai. Dehradun has the Wildlife Institute of India (trap)."}, "hi": {"q": "जैविक विविधता अधिनियम, 2002 के तहत स्थापित राष्ट्रीय जैव विविधता प्राधिकरण का मुख्यालय कहाँ है?", "o": ["नई दिल्ली", "देहरादून", "कोलकाता", "चेन्नई"], "e": "NBA चेन्नई में है। देहरादून में भारतीय वन्यजीव संस्थान है (ट्रैप)।"}}, {"a": 2, "en": {"q": "The 1984 Bhopal gas tragedy, caused by a leak of methyl isocyanate, led directly to the enactment of the:", "o": ["Wildlife Act, 1972", "Water Act, 1974", "EP Act, 1986", "NGT Act, 2010"], "e": "The Environment (Protection) Act, 1986 is the umbrella law passed after Bhopal."}, "hi": {"q": "मिथाइल आइसोसाइनेट के रिसाव से हुई 1984 की भोपाल गैस त्रासदी के बाद सीधे कौन-सा कानून बना?", "o": ["वन्यजीव अधिनियम, 1972", "जल अधिनियम, 1974", "EP अधिनियम, 1986", "NGT अधिनियम, 2010"], "e": "पर्यावरण (संरक्षण) अधिनियम, 1986 भोपाल के बाद पारित अम्ब्रेला कानून है।"}}, {"a": 1, "en": {"q": "Which Indian state has the highest number of Ramsar sites (2026)?", "o": ["Uttar Pradesh", "Tamil Nadu", "Odisha", "Kerala"], "e": "Tamil Nadu has 20 Ramsar sites; Uttar Pradesh is second (trap). India has 103 Ramsar sites in total."}, "hi": {"q": "किस भारतीय राज्य में सबसे अधिक रामसर स्थल हैं (2026)?", "o": ["उत्तर प्रदेश", "तमिलनाडु", "ओडिशा", "केरल"], "e": "तमिलनाडु में 20 रामसर स्थल हैं; उत्तर प्रदेश दूसरे स्थान पर है (ट्रैप)। भारत में कुल 103 रामसर स्थल हैं।"}}, {"a": 3, "en": {"q": "Project Tiger, India's flagship tiger conservation programme, was launched in:", "o": ["1972", "1986", "1992", "1973"], "e": "1972 = Wildlife Protection Act and 1992 = Project Elephant (traps). India now has 58 tiger reserves."}, "hi": {"q": "भारत का प्रमुख बाघ संरक्षण कार्यक्रम, प्रोजेक्ट टाइगर, कब शुरू हुआ?", "o": ["1972", "1986", "1992", "1973"], "e": "1972 = वन्यजीव संरक्षण अधिनियम और 1992 = प्रोजेक्ट एलिफ़ेंट (ट्रैप)। भारत में अब 58 टाइगर रिज़र्व हैं।"}}, {"a": 0, "en": {"q": "In a biosphere reserve, the zone kept fully protected, where no human activity except monitoring is allowed, is the:", "o": ["Core zone", "Buffer zone", "Transition zone", "Manipulation zone"], "e": "Core = fully protected; buffer = research and education; transition = settlements and sustainable use."}, "hi": {"q": "जीवमंडल आरक्षित क्षेत्र का वह क्षेत्र जो पूर्णतः संरक्षित रहता है और जहाँ निगरानी के अलावा कोई मानवीय गतिविधि नहीं होती, कहलाता है:", "o": ["कोर क्षेत्र", "बफ़र क्षेत्र", "संक्रमण क्षेत्र", "प्रबंधन क्षेत्र"], "e": "कोर = पूर्ण संरक्षित; बफ़र = अनुसंधान व शिक्षा; संक्रमण = बस्तियाँ व सतत उपयोग।"}}, {"a": 1, "en": {"q": "India's only floating national park, home to the Sangai deer, is:", "o": ["Kaziranga, Assam", "Keibul Lamjao, Manipur", "Dachigam, J&K", "Silent Valley, Kerala"], "e": "Keibul Lamjao lies on the floating biomass (phumdis) of Loktak Lake."}, "hi": {"q": "भारत का एकमात्र तैरता राष्ट्रीय उद्यान, जहाँ संगाई हिरण पाया जाता है:", "o": ["काज़ीरंगा, असम", "केइबुल लामजाओ, मणिपुर", "दाचीगाम, J&K", "साइलेंट वैली, केरल"], "e": "केइबुल लामजाओ लोकटक झील के तैरते जैवभार (फुमदी) पर स्थित है।"}}, {"a": 1, "en": {"q": "The United Nations Environment Programme (UNEP), headquartered in Nairobi, was established after the:", "o": ["Rio Summit, 1992", "Stockholm Conference, 1972", "Kyoto Conference, 1997", "Montreal meeting, 1987"], "e": "Stockholm 1972 was the first UN conference on the human environment; World Environment Day (5 June) also came from it."}, "hi": {"q": "नैरोबी स्थित संयुक्त राष्ट्र पर्यावरण कार्यक्रम (UNEP) की स्थापना किसके बाद हुई?", "o": ["रियो शिखर सम्मेलन, 1992", "स्टॉकहोम सम्मेलन, 1972", "क्योटो सम्मेलन, 1997", "मॉन्ट्रियल बैठक, 1987"], "e": "स्टॉकहोम 1972 मानव पर्यावरण पर पहला UN सम्मेलन था; विश्व पर्यावरण दिवस (5 जून) भी इसी से आया।"}}];
+
+const N = Q.length, TOTAL = Math.round(N*48), K = "abcd";
+let lang = "en", cur = 0, ans, visited, marked, left, tick, done = false;
+const $ = id => document.getElementById(id);
+const t = k => UI[lang][k];
+
+function setLang(l){
+  lang = l;
+  document.documentElement.lang = l;
+  document.body.classList.toggle("hi", l === "hi");
+  $("bEn").setAttribute("aria-pressed", l === "en");
+  $("bHi").setAttribute("aria-pressed", l === "hi");
+  document.querySelectorAll("[data-t]").forEach(el => { const v = t(el.dataset.t); if (typeof v === "string") el.textContent = v; });
+  $("rules").innerHTML = t("rules").map(r => `<li>${r}</li>`).join("");
+  $("legend").innerHTML = t("legend").map(([c,l]) => `<span><i style="background:${c}"></i>${l}</span>`).join("");
+  if ($("quiz").style.display === "grid") renderQ();
+  if (done) renderResult();
+}
+
+function reset(){
+  ans = Array(N).fill(null); visited = Array(N).fill(false); marked = Array(N).fill(false);
+  cur = 0; left = TOTAL; done = false;
+}
+
+function startTest(){
+  reset();
+  $("start").style.display = "none"; $("result").style.display = "none";
+  $("quiz").style.display = "grid"; $("timer").style.display = "block";
+  renderQ(); updTimer();
+  clearInterval(tick);
+  tick = setInterval(() => { left--; updTimer(); if (left <= 0) { finish(true); } }, 1000);
+  window.scrollTo(0,0);
+}
+
+function updTimer(){
+  const m = Math.floor(Math.max(left,0)/60), s = Math.max(left,0)%60;
+  $("timer").textContent = `${String(m).padStart(2,"0")}:${String(s).padStart(2,"0")}`;
+  $("timer").classList.toggle("low", left <= 120);
+}
+
+function renderQ(){
+  visited[cur] = true;
+  const q = Q[cur][lang];
+  $("qno").textContent = `${t("q")} ${cur+1} ${t("of")} ${N}`;
+  $("qtext").textContent = q.q;
+  $("opts").innerHTML = q.o.map((o,i) =>
+    `<button class="opt" role="radio" aria-checked="${ans[cur]===i}" data-i="${i}"><span class="k">${K[i]}</span><span>${o}</span></button>`).join("");
+  $("opts").querySelectorAll(".opt").forEach(b => b.onclick = () => { ans[cur] = +b.dataset.i; renderQ(); });
+  $("prevBtn").disabled = cur === 0;
+  renderPal();
+}
+
+function renderPal(){
+  $("pal").innerHTML = Q.map((_,i) => {
+    let c = "";
+    if (marked[i]) c = ans[i] !== null ? "mka" : "mk";
+    else if (ans[i] !== null) c = "ans";
+    else if (visited[i]) c = "na";
+    return `<button class="${c}${i===cur?" cur":""}" data-i="${i}" aria-label="${t("q")} ${i+1}">${i+1}</button>`;
+  }).join("");
+  $("pal").querySelectorAll("button").forEach(b => b.onclick = () => { cur = +b.dataset.i; renderQ(); });
+  const a = ans.filter(x => x !== null).length, mk = marked.filter(Boolean).length;
+  const nv = visited.filter(v => !v).length, na = visited.filter((v,i) => v && ans[i] === null).length;
+  $("counts").innerHTML = [[t("cAns"),a],[t("cNa"),na],[t("cMk"),mk],[t("cNv"),nv]].map(([l,v]) => `<div><span>${l}</span><b>${v}</b></div>`).join("");
+}
+
+function go(d){ if (cur + d >= 0 && cur + d < N) { cur += d; renderQ(); window.scrollTo({top:0}); } }
+
+function askSubmit(){
+  const a = ans.filter(x => x !== null).length;
+  $("mBody").textContent = UI[lang].mBody(a, N - a);
+  $("modal").style.display = "grid"; $("mYes").focus();
+}
+
+function finish(auto){
+  clearInterval(tick); done = true;
+  $("modal").style.display = "none";
+  $("quiz").style.display = "none"; $("timer").style.display = "none";
+  $("result").style.display = "block";
+  renderResult();
+  if (auto) alert(t("timeUp"));
+  window.scrollTo(0,0);
+}
+
+function renderResult(){
+  let c = 0, w = 0;
+  Q.forEach((q,i) => { if (ans[i] === null) return; ans[i] === q.a ? c++ : w++; });
+  const s = N - c - w, score = Math.round((c - w/3) * 100) / 100;
+  const acc = c + w ? Math.round(c / (c + w) * 100) : 0;
+  $("scoreVal").textContent = score;
+  const pct = Math.max(0, score) / N * 100;
+  $("ring").style.background = `conic-gradient(var(--leaf) ${pct}%, var(--chip) 0)`;
+  $("stats").innerHTML = [[t("sC"),c,"var(--leaf)"],[t("sW"),w,"var(--red)"],[t("sS"),s,"var(--amber)"],[t("sA"),acc+"%","var(--ink)"]]
+    .map(([l,v,col]) => `<div class="stat"><strong style="color:${col}">${v}</strong><span>${l}</span></div>`).join("");
+  const v = t("verdicts"); $("verdict").textContent = score < 10 ? v[0] : score < 16 ? v[1] : score < 21 ? v[2] : v[3];
+  $("review").innerHTML = Q.map((q,i) => {
+    const d = q[lang], u = ans[i], st = u === null ? "s" : u === q.a ? "c" : "w";
+    const tag = st === "c" ? t("tC") : st === "w" ? t("tW") : t("tS");
+    const opts = d.o.map((o,j) => `<li class="${j===q.a?"right":(j===u?"wrong":"")}">(${K[j]}) ${o}</li>`).join("");
+    return `<div class="rv ${st}"><span class="tag">${t("q")} ${i+1} · ${tag}</span><p>${d.q}</p><ul>${opts}</ul><div class="exp"><b>${t("ans")}: (${K[q.a]})</b> – ${d.e}</div></div>`;
+  }).join("");
+}
+
+$("bEn").onclick = () => setLang("en");
+$("bHi").onclick = () => setLang("hi");
+$("startBtn").onclick = startTest;
+$("retryBtn").onclick = startTest;
+$("prevBtn").onclick = () => go(-1);
+$("nextBtn").onclick = () => { if (cur === N-1) renderQ(); else go(1); };
+$("clearBtn").onclick = () => { ans[cur] = null; renderQ(); };
+$("markBtn").onclick = () => { marked[cur] = !marked[cur]; if (cur < N-1) go(1); else renderQ(); };
+$("submitBtn").onclick = askSubmit;
+$("mNo").onclick = () => { $("modal").style.display = "none"; };
+$("mYes").onclick = () => finish(false);
+document.addEventListener("keydown", e => {
+  if ($("modal").style.display === "grid" && e.key === "Escape") $("modal").style.display = "none";
+  if ($("quiz").style.display !== "grid" || $("modal").style.display === "grid") return;
+  if (["1","2","3","4"].includes(e.key)) { ans[cur] = +e.key - 1; renderQ(); }
+  if (e.key === "ArrowRight") go(1);
+  if (e.key === "ArrowLeft") go(-1);
+});
+reset(); setLang("en");
+</script>
+</body>
+</html>
